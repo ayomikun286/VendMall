@@ -61,8 +61,6 @@ export function CreateVendor(){
 
         vendors.push(newVendor);
 
-        message("Account created successfull" , "success")
-
         localStorage.setItem("vendors", JSON.stringify(vendors));
 
 
