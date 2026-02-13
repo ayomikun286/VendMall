@@ -5,11 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
   navBar();
   FAQ();
 
-    document.getElementById('hide-create').addEventListener('click', ()=>{
+    document.getElementById('goCreate').addEventListener('click', ()=>{
     window.location.href = "create-Account.html";
   });
 
-  document.getElementById('hide-login').onclick = () =>{
+  document.getElementById('goLogin').onclick = () =>{
     window.location.href = "login.html";
   }
 
