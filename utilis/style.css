@@ -417,6 +417,11 @@ nav{
     font-weight: 600;
 }
 
+
+input{
+    font-size: 16px;
+}
+
 .PlanCARD h1{
     font-size: clamp(1.9em, 5vw, 3.2rem);
     font-weight: 700;
