@@ -788,7 +788,7 @@ footer{
 
     }
 
-    #hide{
+    #hide-create,#hide-login{
         display: none;
     }
 }
