@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VendMall - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="utilis/propertise.css" />
+    <link rel="stylesheet" href="utilis/createACC.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="utilis/images/site_logo.png" alt="" width="150">
+        </div>
+        <div class="navLink" id="navLink">
+            <div class="line2"></div>
+            <a href="">About Us</a>
+            <a href="">Terms and Confitions</a>
+            <a href="">Privacy Plice</a>
+            <div class="line"></div>
+            <button>English <i class="fa-solid fa-angle-down"></i></button>
+        </div>
+
+        <div class="navMobile" id="navMobile">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+    </nav>
+
+    <div class="mother">
+        <div class="imageDIv">
+
+            <img src="utilis/images/display.png" alt="">
+
+        </div>
+
+        <div class="formDiv-Create">
+            <form id="form-create">
+                <h2>Register</h2>
+                <p style="font-size: 0.8rem; font-weight: 500;">Create your account to get started</p>
+                <div class="inputDiv">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="Name" placeholder="Enter your Name">
+                </div>
+                <div class="inputDiv">
+                    <label for="name">Store Name</label>
+                    <input type="text" name="name" id="StoreName" placeholder="Enter your Store Name">
+                </div>
+                <div class="inputDiv">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="Email" placeholder="Enter your email">
+                </div>
+                <div class="inputDiv">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="Pass" placeholder="Enter your password">
+                </div>
+                <div class="inputDiv">
+                    <label for="password">Confirm Password</label>
+                    <input type="password" name="password" id="confPass" placeholder="Enter Confirm password">
+                </div>
+                <div class="termsCheck">
+                    <input type="checkbox" id="agreeTerms">
+                    <p>I agree to the <a href="Terms.html">Terms and Conditions</a> and the <a
+                            href="privacy.html">Privacy Policy</a></p>
+                </div>
+                <div class="btnDIV">
+                    <button>Login</button>
+                </div>
+                <small>
+                    Already have an account? <a href="login.html"><b>Login</b></a></small>
+                <p class="createdBy">© 2026 VendMall</p>
+            </form>
+            <!-- ==========================loader==================> -->
+            <div id="loader">
+                <div class="loader">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+            </div>
+           
+        </div>
+        <!-- alert -->
+         <div id="msg"></div>
+
+        <script type="module" src="createAcctFunction/script.js"></script>
+</body>
+
+</html>

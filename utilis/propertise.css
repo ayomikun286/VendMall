@@ -1,0 +1,17 @@
+:root {
+
+    --primary-color : #C0A935;
+    --secondry-color : #293240;
+    --accent: #1C232F;
+
+    /* error message */
+     --error-bg: #FDECEC;
+  --error-text: #B42318;
+  --error-border: #F5A3A3;
+
+
+  /* success message */
+   --success-bg: #ECFDF3;
+  --success-text: #027A48;
+  --success-border: #6CE9A6;
+}

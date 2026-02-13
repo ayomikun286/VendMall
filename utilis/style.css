@@ -1,0 +1,794 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+     font-family: 'Montserrat', sans-serif;
+}
+
+.firstNav{
+    background-color: var(--accent);
+    color: white;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(0.5rem , 5vw, 0.8rem);
+}
+
+header{
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 50px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 90px;    
+}
+
+.logoNavDIV{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.navLinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.navLinks a{
+    text-decoration: none;
+    color: var(--secondry-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btnDIV{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btnDIV button{
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    background-color: transparent;
+    width: 120px;
+    height: 40px;
+    border-radius:30px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.btnDIV button:hover{
+    background-color: var(--accent);
+    color: white;
+
+}
+
+.closeMENU{
+    display: none;
+}
+
+#navMObile{
+    display: none;
+}
+
+.heroSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 10px;
+   
+}
+
+.textHero{
+   width: 600px;
+}
+
+.textHero h1{
+    font-weight: 400;
+    font-size: clamp(1.2rem, 5vw, 2.6rem);
+}
+
+.imageCard{
+    width: 600px;
+    height: 350px;
+    margin-left:0px;
+    background-image: url('images/home_banner.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.textHero button{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid var(--accent);
+    width: 130px;
+    height: 50px;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 1rem;
+    color: rgb(22, 21, 21);
+}
+
+.trustDiv{
+    padding: 0px 40px;
+    margin-top: -10px;
+}
+
+.trustDiv p{
+    color: var(--secondry-color);
+    font-size: 13px;
+}
+
+.features{
+    background-color: var(--accent);
+    color: white;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items:center ;
+     padding: 80px 10px ;
+     padding-bottom: 150px;     
+}
+
+.featP,.featH3,.btnBuy{
+    width: 85%;
+    margin-top: -2px;
+}
+
+.BTNbuy{
+    display: flex;
+    align-items: center;
+    background-color:var(--primary-color);
+   border: none;
+    width: 130px;
+    height: 40px;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 30px;
+    padding: 5px;
+    font-size: 0.9rem;
+    color: white;
+
+}
+
+.contenrCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px 90px;
+    margin-top: 20px;
+}
+
+.contenrCard div{
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+    border-radius: 15px;
+    background-color: var(--secondry-color);
+    padding: 30px;
+   
+}
+
+.contenrCard div:nth-child(1){
+    background-color: var(--primary-color);
+    box-shadow: 0px 5px 10px rgb(34, 34, 77);
+}
+
+.contenrCard div:nth-child(1) h2{
+    color: black;
+}
+
+.contenrCard h2{
+    font-weight: 500;
+
+}
+
+.TextStoreGo{
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+}
+
+.storeGOSection{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: whitesmoke;
+    padding: 50px 0px ;
+}
+
+.outImage{
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    border-radius: 15px;
+    margin-top: -160px;
+    overflow: hidden;
+}
+
+.outImage img{
+    width: 100%;
+   
+}
+
+
+.saasTextImageDiv,.saasTextImageDivSec{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    gap: 50px;
+    flex: 1;
+    padding: 20px 180px;
+}
+
+.saasTextImageDivSec{
+    flex-direction: row-reverse;
+}
+
+.saasText{
+    flex: 1;
+}
+
+.saasIMG img{
+    width: 100%;
+}
+
+.saasIMG{
+    width: 100%;
+    max-width: 600px;
+    flex: 2;
+    overflow: hidden;
+   box-shadow: 0px 0px 10px gray;
+}
+
+.discover{
+    background-color: var(--accent);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.discover h1{
+    margin-top: -10px;
+    margin-bottom: -10px;
+    font-size: clamp(1.2rem , 5vw, 1.8rem);
+}
+
+.featureDIX{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+    row-gap: 30px;
+    column-gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 80px;
+}
+
+.featureDIX div{
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   padding: 20px;
+    text-align: center;
+}
+
+.featureDIX p{
+    font-size: 1rem;
+}
+
+.featureDIX div:nth-child(2){
+    background-color: var(--primary-color);
+}
+
+.featureDIX div:nth-child(2) h2 {
+    color: black;
+}
+
+.PLAN{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 30px 10px;
+    text-align:center ;
+}
+
+.PLAN h1{
+    font-weight: 400;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    font-size: clamp(1.3rem, 5vw, 1.9rem);
+}
+
+
+.PlanDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.PlanDiv .PlanCARD:nth-child(3){
+    background-color: var(--secondry-color);
+    color: white;
+}
+
+.PlanCARD{
+    background-color: white;
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    height: auto;
+    border-radius: 15px;
+    position: relative;
+    padding-top: 50px;
+}
+
+.PlanFeaturs div{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+   font-size: 0.8rem;    
+}
+
+.PlanFeaturs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.PlanFeaturs i{
+    color: var(--primary-color);
+}
+
+.planLog{
+    position: absolute;
+    top: -35px;
+    left: 0px;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.planLog p{
+    background-color: var(--secondry-color);
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.PlanCARD h1{
+    font-size: clamp(1.9em, 5vw, 3.2rem);
+    font-weight: 700;
+}
+.PlanCARD h1:nth-child(2) span{
+    font-size: 12px;
+}
+
+.PlanCARD button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-weight: 500;
+    border-radius: 30px;
+
+}
+
+.quest1{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    overflow: hidden;
+    height: 80px;
+    transition: 0.5s;
+  
+
+}
+
+
+
+.openANSWER{
+    height: auto;
+}
+
+
+
+.beforeFOOTER{
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+}
+
+
+
+
+.Quetin{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+    justify-content: space-between;
+    transition: 0.5s ease;
+
+}
+
+.Quetin:focus{
+
+    outline: 1px solid #007bff88;
+    background-color: whitesmoke;
+
+}
+
+.answer{
+    display: flex;
+}
+
+.FAQDiv{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 50px;
+  
+   
+}
+
+
+
+.faqFT,.faqSEC{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.Quetin i{  
+    transition: 0.5s ease;
+}
+.Quetin{
+    font-weight: 600;
+}
+
+.openQUEST{
+    transform: rotate(90deg);
+}
+
+.footContent{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 80px;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot1,.foot2{
+    flex: 1;
+}
+
+.foot3{
+    flex: 2;
+}
+
+.joinInutDiv{
+    width: 80%;
+    height: 50px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    padding: 2px 5px;
+    border: 1px solid var(--primary-color);
+    overflow: hidden;
+}
+
+.joinInutDiv input{
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 0px 10px;
+}
+
+.joinInutDiv input:focus{
+    outline: none;
+}
+
+.joinInutDiv input::placeholder{
+    font-size: 0.95rem;
+    font-weight: 100;
+}
+
+.joinInutDiv button{
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--secondry-color);
+    color: white;
+}
+
+.lastFOOT{
+    border-top: 1px solid gray;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+.foot2 p{
+    cursor: pointer;
+}
+
+.foot2 a{
+    text-decoration: none;
+    color: black;
+}
+/* ===========================terms ========= */
+
+.TXT{
+    color: white;
+    padding: 30px 80px;
+}
+
+.TXT h1{
+    width: 300px;
+    font-size: clamp(1.8rem , 5vw, 2.8rem);
+}
+
+.termText{
+    padding: 90px;
+}
+
+.termText p{
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.TXt{
+    padding: 30px 80px;
+    color: white;
+}
+
+
+
+
+
+@media (max-width:900px) {
+
+    .TXt{
+        padding: 20px 20px  ;
+    }
+    .termText{
+        padding: 30px;
+    }
+    .TXT{
+        padding: 20px 20px;
+    }
+    .TXT h1{
+        width: 100%;
+    }
+    .footContent{
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    .FAQDiv{
+          flex-wrap: wrap;
+    }
+    .FAQhead {
+        padding: 15px;
+    }
+
+    .beforeFOOTER{
+        padding: 10px;
+    }
+    .PlanCARD{
+        max-width: 100%;
+    }
+    .PlanDiv{
+        gap: 50px;
+        padding: 10px;
+    }
+    .featureDIX div{
+       max-width: 100%;
+    }
+
+    .featureDIX{
+        grid-template-columns: repeat(1,1fr);
+        padding: 10px;
+    }
+
+    .discover{
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .storeGOSection{
+        gap: 10px;
+    }
+
+   .saasTextImageDivSec{
+        flex-direction: column-reverse;
+        padding: 20px 10px;
+        
+    }
+    .saasText{
+        padding: 20px;
+    }
+    .saasTextImageDiv{
+       flex-direction: column;
+        padding: 20px 10px;
+     
+    }
+    .outImage{
+      max-width: 450px;
+        height:auto ;
+      
+    }
+   
+    .contenrCard div{
+        max-width: 100%;
+    }
+    .contenrCard{
+        padding: 8px 8px;
+    }
+    
+    header{
+        padding: 10px;
+        height: auto;
+    }
+
+
+    nav{
+        padding: 0px 20px;
+    }
+    #navMObile span{
+        background-color: var(--secondry-color);
+        height: 2px;
+        width: 30px;
+    }
+
+    #navMObile:hover{
+        background-color: transparent;
+        box-shadow: 0px 0px 5px var(--accent) ;
+       
+    }
+
+    #navMObile{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         gap: 5px;
+    }
+    .closeMENU{
+        display: flex;
+        justify-content: end;
+        background-color: var(--primary-color);
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+    .navLinks a{
+        
+        width: 100%;
+        padding: 0px 10px;
+    }
+
+    .navLinks{
+        position: fixed;
+        background-color: white;
+        height: 100vh;
+        flex-direction: column;
+        text-align: start;
+        align-items: start;
+        justify-content: start;
+        width:0px ;
+        left: 0px;
+        top: 0px;
+        gap: 20px;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+
+    }
+
+    .openNav{
+         width:250px ;
+    }
+
+    .btnDIV button{
+        width: 50px;
+        height: 50px;
+        padding: 0px 0px;
+        transition: 0.5s ease;
+    }
+
+    .btnDIV button:hover{
+
+        background-color: var(--accent);
+        color:white;
+
+    }
+
+    #hide{
+        display: none;
+    }
+}
