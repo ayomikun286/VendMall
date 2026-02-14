@@ -237,6 +237,10 @@ section{
     border-bottom: 1px solid rgba(128, 128, 128, 0.432);
 }
 
+.logo img{
+    width:200px
+}
+
 #closrMnav{
     background-color: transparent;
     border: none;
@@ -246,6 +250,9 @@ section{
 
 
 @media (max-width:900px){
+    .logo img{
+             width:150px
+    }
 
     #closrMnav{
         display: flex;
