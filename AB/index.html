@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendmall</title>
+   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./fontawesome-free-7.0.1-web/css/fontawesome.min.css">
+  <link rel="stylesheet" href="./fontawesome-free-7.0.1-web/css/brands.min.css">
+  <link rel="stylesheet" href="./fontawesome-free-7.0.1-web/css/solid.min.css">
+</head>
+<style>
+  *{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+.NavLinks {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+.Logo {
+  display: flex;
+  align-items: center; gap: 5px;
+  font-size: 14px;
+
+}
+#brand{
+  color: white;
+  
+}
+.brands {
+  display: flex;
+  gap: 20px;
+
+}
+
+.Navlink{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  justify-content: space-around;
+}
+
+#language {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+
+
+
+
+</style>
+
+<body>
+  <div class="NavLinks">
+    <div class="Logo">
+      <i class="fa-regular fa-bell" style="width: 30px; color: white;"></i>
+      <p>FREE SHIPPING world wide for all orders over $199</p>
+    </div>
+
+    <div class="Logo">
+    <i class="fa-solid fa-phone" style="width: 30px; color: white;"></i>
+      <p>(212) 308-1220 Request a call</p>
+    </div>
+
+    <div class="brands">
+      <div id="brand"><i class="fa-brands fa-whatsapp"></i></div>
+      <div id="brand"><i class="fa-brands fa-x-twitter"></i></div>
+      <div id="brand"><i class="fa-brands fa-instagram"></i></div>
+      <div id="brand"><i class="fa-regular fa-envelope"></i></div>
+  </div>
+  </div>
+
+  <div class="Navlink">
+    <div><p>StoreGo</p></div>
+   <div><p>Ayo Shop</p></div>
+   
+    
+   <select name="" id="language">
+    <option value="en">English</option>
+    <option value="ar">Arabic</option>
+    <option value="chn">Chinese</option>
+    <option value="en">Danish</option>
+    <option value="ar">German</option>
+    <option value="chn">Spanish</option>
+    <option value="en">French</option>
+    <option value="ar">Hebrew</option>
+    <option value="chn">Italian</option>
+    <option value="en">Japanese</option>
+    <option value="ar">Dutch</option>
+    <option value="chn">Polish</option>
+    <option value="ar">Portuguese</option>
+    <option value="chn">Russian</option>
+    <option value="en">Turkish</option>
+   </select>
+
+   <i class="fa-solid fa-magnifying-glass"></i>
+   <p>Log in</p>
+   <i class="fa-solid fa-cart-arrow-down"></i>
+  </div>
+</body>
+</html>
