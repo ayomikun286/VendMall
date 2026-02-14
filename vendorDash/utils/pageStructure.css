@@ -234,6 +234,9 @@ section{
 
 
 @media (max-width:900px){
+    nav{
+        padding: 20px 10px;
+    }
 
     #destop{
         display:none;
@@ -254,6 +257,9 @@ section{
     }
     .line{
         display: none;
+    }
+    .swich{
+        gap: 10px;
     }
     .nameEmial{
         display: none;
