@@ -253,6 +253,7 @@ section{
 
     .logo{
         justify-content: space-between;
+        padding: 10px 10px;
     }
     .logo img{
              width:130px
