@@ -90,5 +90,8 @@ section{
         padding: 0;
         flex: 0;
       }
+      section{
+        padding: 15px 15px;
+      }
 
 }
