@@ -21,7 +21,7 @@ aside {
      transition: 0.5s ease;
      box-shadow: 3px 0px 8px rgba(220, 220, 220, 0.267);
      overflow: hidden;
-    
+    background-color: rgba(255, 255, 255, 0.815);
 }
 
 .closeSide{
@@ -30,7 +30,7 @@ aside {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-direction: column;
 }
 
 
@@ -249,6 +249,85 @@ section{
 }
 
 
+.Store{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 10px ;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.432);
+      position: relative;
+}
+
+.Store small{
+    font-weight: 600;
+   color: gray;
+   font-size: 0.7rem;
+   padding: 0px 10px;
+}
+
+
+.navBTN{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    transition: 0.5s ease;
+}
+.iTxt{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.iTxt b{
+    font-weight: 500;
+}
+
+.navBTN:hover{
+    background-color: whitesmoke;
+}
+
+.popUp{
+    background-color: white;
+    position: absolute;
+    padding: 10px 10px;
+    box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.226);
+    border-radius: 10px;
+    width: 90%;
+    bottom: -100px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    height: auto;
+    box-sizing: border-box;
+}
+.popUp.show{
+    display: flex;
+}
+
+.SM{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     font-weight: 500;
+     font-size: 0.8rem;
+     margin-top: 15px;
+}
+
+.createStore{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.createStore p{
+    font-size: 0.9rem;
+    color: gray;
+}
+
 @media (max-width:900px){
 
     .logo{
@@ -295,7 +374,7 @@ section{
       aside{
         position: fixed;
         z-index: 9999;
-        background-color: white;
+        background-color: rgb(255, 255, 255);
         width: 60%;
         left: -1000px;
         top: 0px;

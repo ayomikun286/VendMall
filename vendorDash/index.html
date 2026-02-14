@@ -7,7 +7,8 @@
     <title>VendMall - Dashboard</title>
     <link rel="stylesheet" href="utils/pageStructure.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="utils/dashboard.css">
 </head>
 
@@ -15,12 +16,33 @@
     <aside id="aside">
         <div class="logo">
             <img src="utils/images/site_logo.png" alt="VendMall">
-
             <button id="closrMnav">
                 <i class="fa-solid fa-xmark"></i>
             </button>
+        </div>
+        <div class="Store" id="Store">
+            <small>Store</small>
+            <div class="navBTN" id="StorePop">
+                <div class="iTxt">
+                    <i class="fa-solid fa-shop"></i>
+                    <b id="storeName"></b>
+                </div>
+                <i class="fa-solid fa-angle-down" id="storeArrow"></i>
+            </div>
+            <div class="popUp" id="popUp">
+                <div class="SM">
+                    <div class="iTxt">
+                        <i class="fa-solid fa-shop"></i>
+                        <b id="storeName"></b>
+                    </div>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="createStore">
+                    <i class="fa-solid fa-plus"></i>
+                    <p>Create New store</p>
 
-
+                </div>
+            </div>
         </div>
     </aside>
     <main>
@@ -30,7 +52,7 @@
                     <i class="fa-solid fa-table-columns"></i>
                 </button>
                 <button id="navmoblieBTN">
-                     <i class="fa-solid fa-bars"  ></i>
+                    <i class="fa-solid fa-bars"></i>
                 </button>
 
                 <div class="line" style="width: 1px; height: 15px;background-color: rgba(128, 128, 128, 0.548);"></div>
@@ -51,7 +73,7 @@
                         <p>edegbai</p>
                         <small id="email"></small>
                     </div>
-                    <i class="fa-solid fa-angle-down" style="font-size: 0.8rem;"></i>
+                    <i class="fa-solid fa-angle-down" id="profileArrow" style="font-size: 0.8rem;"></i>
 
                     <div class="profileDrop" id="profileDrop">
                         <div class="NameEmail">
