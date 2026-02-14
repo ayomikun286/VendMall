@@ -9,10 +9,10 @@ export function profile(){
     profileSwich.addEventListener('click', (e)=>{
        e.stopPropagation();
             profileDrop.classList.add('show');
-    })
+    });
     document.addEventListener('click', () => {
          profileDrop.classList.remove('show');
-    })
+    });
 }
 
 
@@ -48,4 +48,25 @@ export function navFunction() {
             isOpen = false
         }
     }
+}
+
+export function mobileNavBTN(){
+    const navmoblieBTN = document.getElementById('navmoblieBTN');
+    const aside = document.getElementById('aside');
+   const closrMnav = document.getElementById('closrMnav');
+    if(!navmoblieBTN || !aside || !closrMnav){
+            return;
+    }
+
+    navmoblieBTN.addEventListener('click', ()=>{
+            aside.classList.add('openMobileNav');
+    })
+
+    closrMnav.addEventListener('click', ()=>{
+         aside.classList.remove('openMobileNav');
+
+    })
+
+
+
 }

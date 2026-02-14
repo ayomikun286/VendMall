@@ -7,21 +7,32 @@
     <title>VendMall - Dashboard</title>
     <link rel="stylesheet" href="utils/pageStructure.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="utils/dashboard.css">
 </head>
 
 <body>
     <aside id="aside">
-        SIDE
+        <div class="logo">
+            <img src="utils/images/site_logo.png" alt="VendMall" width="200px">
+
+            <button id="closrMnav">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+
+        </div>
     </aside>
     <main>
         <nav>
             <div class="swich">
-                <button id="close">
-                    <i class="fa-solid fa-table-columns" id="destop"></i>
-                    <i class="fa-solid fa-bars" id="navmoblieBTN" ></i>
+                <button id="close" class="destop">
+                    <i class="fa-solid fa-table-columns"></i>
                 </button>
+                <button id="navmoblieBTN">
+                     <i class="fa-solid fa-bars"  ></i>
+                </button>
+
                 <div class="line" style="width: 1px; height: 15px;background-color: rgba(128, 128, 128, 0.548);"></div>
                 <div class="swichText">
                     <p>Home</p>
