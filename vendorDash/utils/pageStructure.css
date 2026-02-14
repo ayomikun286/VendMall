@@ -234,6 +234,7 @@ section{
     justify-content: center;
     gap: 10px;
     padding: 20px;
+
     border-bottom: 1px solid rgba(128, 128, 128, 0.432);
 }
 
@@ -246,12 +247,17 @@ section{
     border: none;
     font-size: 1.3rem;
     display: none;
+    color: black;
 }
 
 
 @media (max-width:900px){
+
+    .logo{
+        justify-content: space-between;
+    }
     .logo img{
-             width:150px
+             width:130px
     }
 
     #closrMnav{
@@ -291,7 +297,7 @@ section{
         position: fixed;
         z-index: 9999;
         background-color: white;
-        width: 50%;
+        width: 60%;
         left: -1000px;
         top: 0px;
         transition: 0.5s ease;
