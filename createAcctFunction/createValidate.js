@@ -64,12 +64,14 @@ export function CreateVendor(){
         localStorage.setItem("vendors", JSON.stringify(vendors));
 
 
-
+        localStorage.setItem("currentVendor", JSON.stringify(newVendor));
+         message("Account created successfull" , "success");
 
         setTimeout(()=>{
             loader.style.display = "none";
-            message("Account created successfull" , "success");
+            window.location.href = "vendorDash/index.html";
             formDivCreate.reset();
+
         },3000)
 
       

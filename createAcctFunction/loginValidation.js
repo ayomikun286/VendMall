@@ -38,13 +38,14 @@ export function loginVendor(){
 
         localStorage.setItem("currentVendor", JSON.stringify(vendor));
 
+          message("Login successful", "success");
         
         setTimeout(()=>{
             loader.style.display = "none"
-            message("Login successful", "success");
+            window.location.href = "vendorDash/index.html";
+        },2000);
 
-
-        },1500);
+       
 
 
 

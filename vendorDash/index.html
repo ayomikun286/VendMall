@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VendMall - Dashboard</title>
+    <link rel="stylesheet" href="pageStructure.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <aside id="aside">
+        SIDE
+    </aside>
+    <main>
+        <nav>
+            <button id="close">cl</button>
+            <h3 id="vendorName"></h3>
+        </nav>
+        <section id="dashBoard">
+            <h1 class="pageName">Dashboard</h1>
+
+        </section>
+
+
+        <section class="content">
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <script>
+        const currentVendor = JSON.parse(localStorage.getItem('currentVendor')) || [];
+        console.log(currentVendor);
+        document.getElementById('vendorName').textContent = currentVendor.name;
+
+
+        let isOpen = false;
+        document.getElementById('close').onclick = () =>{
+            const aside= document.getElementById('aside');
+            if(!isOpen){
+                 aside.classList.add('closeSide')
+                 isOpen = true;
+            }else{
+                 aside.classList.remove('closeSide');
+                 isOpen = false
+            }
+        }
+    </script>
+</body>
+
+</html>
