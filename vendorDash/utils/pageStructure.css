@@ -1,0 +1,268 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+     font-family: 'Montserrat', sans-serif;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     height: 100vh;
+}
+
+
+aside {
+    flex: 1;
+    height: 100%;
+    border-right: 1px solid rgba(128, 128, 128, 0.315);
+     padding: 20px;
+     transition: 0.5s ease;
+     box-shadow: 3px 0px 8px rgba(220, 220, 220, 0.267);
+     overflow: hidden;
+}
+
+.closeSide{
+    flex: 0;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+main{
+    flex: 5;
+    height: 100%;
+    overflow-y:scroll ;
+    overflow-x: hidden;
+    animation:entrance 1s ease ;
+}
+
+
+@keyframes entrance {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+    
+}
+
+
+nav{
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    position:sticky;
+    top: 0px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 3px 8px rgba(220, 220, 220, 0.267);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.349);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.swich{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.swichText{
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    padding: 0px 8px;
+    font-size: 0.8rem;
+    gap: 15px;
+
+}
+
+.swichText i{
+    font-weight: 400;
+    font-size: 0.5rem;
+}
+.swichText span{
+    font-weight: 500;
+}
+
+section{
+    padding: 20px 30px;
+}
+.pageName{
+    font-weight: 400;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.418);
+    width: fit-content;
+}
+
+.content{
+    height: 800px;
+}
+
+
+#close{
+    padding: 8px;
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.623);
+    border-radius: 8px;
+}
+
+.swich2{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.profileSwich{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: auto;
+    padding: 5px;
+    border-radius: 12px;
+    transition: 0.5s ease;
+
+}
+
+.profileSwich:hover{
+    background-color: whitesmoke;
+}
+.profileSwich span{
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+
+}
+
+#language{
+    display: flex;
+    align-items: center;
+    border: none;
+    gap: 15px;
+    padding:10px ;
+    height: 30px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    background-color: transparent;
+    transition: 0.5s ease;
+
+}
+.nameEmial{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 5px;
+}
+
+.nameEmial p{
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: -5px;
+    margin-bottom: -2px;
+}
+
+.nameEmial small{
+    font-size: 0.6rem;
+}
+
+#language:hover{
+    background-color: whitesmoke;
+}
+
+.profileDrop{
+    position: fixed;
+    background-color:white;
+    top: 60px;
+    right: 30px;
+    width: 100%;
+    max-width: 220px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0px 0px 8px rgba(128, 128, 128, 0.562);
+    border-radius:12px;
+    padding: 10px 0px ;
+}
+
+.profileDrop.show{
+    display: flex;
+}
+
+.NameEmail,.myProfile{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 12px;
+    height: 50px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.295);
+    font-size: 0.8rem;
+    transition: 0.5s ease;
+}
+
+.myProfile:hover{
+     background-color: whitesmoke;
+
+}
+.logout:hover{
+    background-color: whitesmoke;
+    
+}
+
+.logout{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 12px;
+    height: 50px;
+    font-size: 0.8rem;
+}
+
+#navmoblieBTN{
+    display: none;
+}
+
+
+@media (max-width:900px){
+
+    #destop{
+        display:none;
+    }
+
+    #navmoblieBTN{
+        display: flex;
+    }
+
+    .nameEmial.mobile{
+        display: flex;
+    }
+    .swichText{
+        gap: 10px;
+    }
+    .swichText i{
+        display: none;
+    }
+    .line{
+        display: none;
+    }
+    .nameEmial{
+        display: none;
+    }
+      aside{
+        width:0;
+        padding: 0;
+        flex: 0;
+      }
+      section{
+        padding: 15px 15px;
+      }
+
+}

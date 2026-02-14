@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VendMall - Dashboard</title>
-    <link rel="stylesheet" href="pageStructure.css">
+    <link rel="stylesheet" href="utils/pageStructure.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
@@ -17,8 +17,53 @@
     </aside>
     <main>
         <nav>
-            <button id="close">cl</button>
-            <h3 id="vendorName"></h3>
+            <div class="swich">
+                <button id="close">
+                    <i class="fa-solid fa-table-columns" id="destop"></i>
+                    <i class="fa-solid fa-bars" id="navmoblieBTN" ></i>
+                </button>
+                <div class="line" style="width: 1px; height: 15px;background-color: rgba(128, 128, 128, 0.548);"></div>
+                <div class="swichText">
+                    <p>Home</p>
+                    <i class="fa-solid fa-greater-than"></i>
+                    <span id="page">Dashboard</span>
+                </div>
+            </div>
+            <div class="swich2">
+                <button id="language">
+                    <p>English</p>
+                    <i class="fa-solid fa-angle-down"></i>
+                </button>
+                <div class="profileSwich" id="profileSwich">
+                    <span>ed</span>
+                    <div class="nameEmial">
+                        <p>edegbai</p>
+                        <small id="email"></small>
+                    </div>
+                    <i class="fa-solid fa-angle-down" style="font-size: 0.8rem;"></i>
+
+                    <div class="profileDrop" id="profileDrop">
+                        <div class="NameEmail">
+                            <span>ed</span>
+                            <div class="nameEmial mobile">
+                                <p>edegbai</p>
+                                <small id="email"></small>
+                            </div>
+                        </div>
+                        <div class="myProfile">
+                            <i class="fa-regular fa-user"></i>
+                            <p>My Profile</p>
+                        </div>
+                        <div class="logout">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <p>Logout</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- <h3 id="vendorName"></h3> -->
         </nav>
         <section id="dashBoard">
             <h1 class="pageName">Dashboard</h1>
@@ -36,24 +81,7 @@
 
 
 
-    <script>
-        const currentVendor = JSON.parse(localStorage.getItem('currentVendor')) || [];
-        console.log(currentVendor);
-        document.getElementById('vendorName').textContent = currentVendor.name;
-
-
-        let isOpen = false;
-        document.getElementById('close').onclick = () =>{
-            const aside= document.getElementById('aside');
-            if(!isOpen){
-                 aside.classList.add('closeSide')
-                 isOpen = true;
-            }else{
-                 aside.classList.remove('closeSide');
-                 isOpen = false
-            }
-        }
-    </script>
+    <script type="module" src="function/script.js"></script>
 </body>
 
 </html>
