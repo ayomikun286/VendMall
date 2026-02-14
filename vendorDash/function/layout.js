@@ -43,7 +43,7 @@ export function profile(){
 export function nameDisplay() {
     const email = document.querySelectorAll('#email');
     const storeName = document.querySelectorAll('#storeName');
-    const nAME = document.getElementById('nAME');
+    const nAME = document.querySelectorAll('#nAME');
     if (!email || !nAME || !storeName ) {
         return;
     }
@@ -56,7 +56,9 @@ export function nameDisplay() {
      SN.textContent = currentVendor.storeName
    });
 
-   nAME.textContent = currentVendor.name
+   nAME.forEach(NM =>{
+    NM.textContent = currentVendor.name;
+   })
 
 }
 
