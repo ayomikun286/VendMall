@@ -6,6 +6,7 @@ export function profile(){
     const profileDrop = document.getElementById('profileDrop');
     const profileSwich = document.getElementById('profileSwich');
     const profileArrow = document.getElementById('profileArrow');
+    const logout = document.getElementById('logout');
     profileSwich.addEventListener('click', (e)=>{
        e.stopPropagation();
             profileDrop.classList.add('show');
@@ -34,6 +35,11 @@ export function profile(){
          storeArrow.classList.remove('fa-angle-up');
           storeArrow.classList.add('fa-angle-down')
     });
+
+    logout.addEventListener('click', ()=>{
+        localStorage.removeItem('currentVendor');
+        window.location.href = " ../login.html";
+    })
 
 }
 
