@@ -43,7 +43,8 @@ export function profile(){
 export function nameDisplay() {
     const email = document.querySelectorAll('#email');
     const storeName = document.querySelectorAll('#storeName');
-    if (!email) {
+    const nAME = document.getElementById('nAME');
+    if (!email || !nAME || !storeName ) {
         return;
     }
     const currentVendor = JSON.parse(localStorage.getItem('currentVendor')) || [];
@@ -55,7 +56,7 @@ export function nameDisplay() {
      SN.textContent = currentVendor.storeName
    });
 
-
+   nAME.textContent = currentVendor.name
 
 }
 
