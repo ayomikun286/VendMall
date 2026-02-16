@@ -461,7 +461,7 @@ section{
       aside{
         position: fixed;
         z-index: 9999;
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(247, 246, 246);
         width: 60%;
         left: -1000px;
         top: 0px;
