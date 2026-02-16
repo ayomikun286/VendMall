@@ -22,18 +22,31 @@ body{
 aside {
     flex: 2;
     height: 100%;
+    overflow-y:scroll ;
     border-right: 1px solid rgba(128, 128, 128, 0.315);
      transition: 0.5s ease;
      box-shadow: 3px 0px 8px rgba(220, 220, 220, 0.267);
-     overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.815);
+     background-color: rgb(247, 246, 246);
+    position: relative;
 }
 
-.closeSide{
+aside::-webkit-scrollbar{
+    background-color: rgb(247, 246, 246);
+}
+
+.navigations{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   line-height: 0.2px;
+}
+
+aside.closeSide{
     flex: 0;
     padding: 50px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
 }
@@ -46,6 +59,7 @@ main{
     overflow-x: hidden;
     animation:entrance 1s ease ;
 }
+
 
 
 @keyframes entrance {
@@ -240,6 +254,9 @@ section{
     justify-content: center;
     padding: 12px 20px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.432);
+     position: sticky;
+    top: 0px;
+    background-color: rgb(247, 246, 246);
 }
 
 .logo img{
@@ -262,6 +279,9 @@ section{
     padding: 10px 10px ;
       border-bottom: 1px solid rgba(128, 128, 128, 0.432);
       position: relative;
+     position: sticky;
+     top: 75px;
+      background-color: rgb(247, 246, 246);
 }
 
 .Store small{
@@ -287,12 +307,17 @@ section{
     gap: 10px;
 }
 
+
+.iTxt.BTN i{
+    font-size: 0.9rem;
+}
 .iTxt b{
     font-weight: 500;
 }
 
 .navBTN:hover{
     background-color: whitesmoke;
+    
 }
 
 .popUp{
@@ -333,6 +358,58 @@ section{
     font-size: 0.9rem;
     color: gray;
 }
+
+
+.SM.dash{
+    padding: 0px 5px;
+    border-radius: 12px;
+    height: 35px;
+    transition: 0.3s ease;
+    color: gray;
+}
+
+
+.SM.dash:hover{
+    background-color: whitesmoke;
+    color: black;
+
+}
+
+
+.dashBTN{
+    padding: 0px 15px;
+    overflow: hidden;
+    height: 52px;
+    transition: 0.3rem ease;
+    width: 100%;
+}
+
+.dashBTN.open{
+    height: auto;
+}
+
+.dashOption{
+    width: 230px;
+    justify-self: end;
+    border-left: 2px solid gray;
+    padding: 0px 8px;
+    color: gray;
+    margin-top: -5px;
+}
+
+.dashOption p{
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 8px;
+     font-size: 0.9rem;
+}
+
+.dashOption p:hover{
+  background-color: whitesmoke;
+    color: black;
+}
+
+
 
 @media (max-width:900px){
 

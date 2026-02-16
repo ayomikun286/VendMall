@@ -4,8 +4,6 @@ import {profile} from "./profile.js";
 import {requireVendor} from "./authGuard.js";
 
 const vendor = requireVendor();
-
-
 if(!vendor){
      throw new Error("No vendor found");
 }
