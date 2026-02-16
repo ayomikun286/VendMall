@@ -40,6 +40,7 @@ aside::-webkit-scrollbar{
     flex-direction: column;
    align-items: center;
    line-height: 0.2px;
+background-color: rgb(247, 246, 246);
 }
 
 aside.closeSide{
@@ -379,7 +380,7 @@ section{
 .dashBTN{
     padding: 0px 15px;
     overflow: hidden;
-    height: 52px;
+    height: 50px;
     transition: 0.3rem ease;
     width: 100%;
 }
@@ -389,12 +390,15 @@ section{
 }
 
 .dashOption{
-    width: 230px;
+    width: 150px;
     justify-self: end;
     border-left: 2px solid gray;
     padding: 0px 8px;
     color: gray;
-    margin-top: -5px;
+    display: flex;
+    flex-direction: column;
+
+   
 }
 
 .dashOption p{
