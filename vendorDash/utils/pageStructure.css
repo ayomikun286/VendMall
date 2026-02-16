@@ -390,7 +390,7 @@ section{
 }
 
 .dashOption{
-    width: 150px;
+    width: 180px;
     justify-self: end;
     border-left: 2px solid gray;
     padding: 0px 8px;
@@ -416,6 +416,15 @@ section{
 
 
 @media (max-width:900px){
+    .dashOption{
+        width: 200px;
+    }
+    .navigations{
+        margin-top: 20px;
+    }
+    .Store{
+        top: 54px;
+    }
 
     .logo{
         justify-content: space-between;
