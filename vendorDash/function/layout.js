@@ -29,18 +29,18 @@ export function mobileNavBTN(){
     const navmoblieBTN = document.getElementById('navmoblieBTN');
     const aside = document.getElementById('aside');
    const closrMnav = document.getElementById('closrMnav');
-    if(!navmoblieBTN || !aside || !closrMnav || !Store){
+    if(!navmoblieBTN || !aside || !closrMnav){
             return;
     }
 
     navmoblieBTN.addEventListener('click', ()=>{
             aside.classList.add('openMobileNav');
-            Store.style.display = "none";
+            
     })
 
     closrMnav.addEventListener('click', ()=>{
          aside.classList.remove('openMobileNav');
-          Store.style.display = "flex"
+          
 
     });
 
