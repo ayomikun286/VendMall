@@ -65,7 +65,7 @@ export function CreateVendor() {
             message("Registration successful! Check your email to verify.", "success");
 
             setTimeout(() => {
-                window.location.href = "login.html";
+                // window.location.href = "login.html";
                 formDivCreate.reset();
             }, 2500);
 

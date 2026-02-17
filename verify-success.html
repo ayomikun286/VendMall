@@ -17,10 +17,10 @@
     localStorage.setItem("token", token);
 
     // Remove token from URL
-    window.history.replaceState({}, document.title, "/verify-success");
+ window.history.replaceState({}, document.title, window.location.pathname);
 
     // Redirect to dashboard
-    window.location.href = "/vendorDash/index.html";
+   window.location.href = "http://127.0.0.1:5500/vendorDash/index.html";
   } else {
     document.body.innerHTML = "<h2>Verification failed</h2>";
   }
