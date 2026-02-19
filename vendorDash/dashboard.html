@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src http://localhost:5000 http://127.0.0.1:5500; script-src 'self'; style-src 'self';"> -->
+    <title>VendMall - Dashboard</title>
+    <link rel="stylesheet" href="utils/pageStructure.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="utils/dashboard.css">
+</head>
+
+<body class="hidden">
+    <aside id="aside">
+        <div class="logo" id="logo">
+            <img src="utils/images/site_logo.png" alt="VendMall" id="logoIcon">
+            <button id="closrMnav">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="Store" id="Store">
+            <small>Store</small>
+            <div class="navBTN" id="StorePop">
+                <div class="iTxt">
+                    <i class="fa-solid fa-shop"></i>
+                    <b id="storeName"></b>
+                </div>
+                <i class="fa-solid fa-angle-down" id="storeArrow"></i>
+            </div>
+            <div class="popUp" id="popUp">
+                <div class="SM">
+                    <div class="iTxt">
+                        <i class="fa-solid fa-shop"></i>
+                        <b id="storeName"></b>
+                    </div>
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <div class="createStore">
+                    <i class="fa-solid fa-plus"></i>
+                    <p>Create New store</p>
+                </div>
+            </div>
+        </div>
+        <div class="navigations">
+            <div class="dashBTN" id="dashDrop">
+                <div class="SM dash" id="dashClick">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-house"></i>
+                        <p>Dashboard</p>
+                    </div>
+                    <i class="fa-solid fa-angle-down" id="dashARROW"></i>
+                </div>
+                <div class="dashOption">
+                    <p>Dashboard</p>
+                    <p>Store Analytics</p>
+                    <p>Oprders</p>
+                </div>
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-table-cells"></i>
+                        <p>Themes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashBTN" id="staffDrop">
+                <div class="SM dash" id="staffClick">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-user-group"></i>
+                        <p>Staff</p>
+                    </div>
+                    <i class="fa-solid fa-angle-down" id="staffArrow"></i>
+                </div>
+                <div class="dashOption">
+                    <p>Roles</p>
+                    <p>User</p>
+                </div>
+
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-desktop"></i>
+                        <p>Pos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashBTN" id="shopDrop">
+                <div class="SM dash" id="shopClick">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <p>Shop</p>
+                    </div>
+                    <i class="fa-solid fa-angle-down" id="shopArrow"></i>
+                </div>
+                <div class="dashOption">
+                    <p>Products</p>
+                    <p>Product Category</p>
+                    <p>Product Tax</p>
+                    <p>Product Coupon</p>
+                    <p>Subscriber</p>
+                    <p>Testimonials</p>
+                </div>
+
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-regular fa-user"></i>
+                        <p>Custormers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-trophy"></i>
+                        <p>Plans</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                       <i class="fa-solid fa-expand"></i>
+                        <p>Referral Program</p>
+                    </div>
+                </div>
+            </div>
+             <div class="dashBTN">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-gear"></i>
+                        <p>Store Settings</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </aside>
+    <main>
+        <nav>
+            <div class="swich">
+                <button id="close" class="destop">
+                    <i class="fa-solid fa-table-columns"></i>
+                </button>
+                <button id="navmoblieBTN">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="line" style="width: 1px; height: 15px;background-color: rgba(128, 128, 128, 0.548);"></div>
+                <div class="swichText">
+                    <p>Home</p>
+                    <i class="fa-solid fa-greater-than"></i>
+                    <span id="page">Dashboard</span>
+                </div>
+            </div>
+            <div class="swich2">
+                <button id="language">
+                    <p>English</p>
+                    <i class="fa-solid fa-angle-down"></i>
+                </button>
+                <div class="profileSwich" id="profileSwich">
+                    <span id="sliceName">ed</span>
+                    <div class="nameEmial">
+                        <p id="nAME"></p>
+                        <small id="email"></small>
+                    </div>
+                    <i class="fa-solid fa-angle-down" id="profileArrow" style="font-size: 0.8rem;"></i>
+
+                    <div class="profileDrop" id="profileDrop">
+                        <div class="NameEmail">
+                            <span id="sliceName">ed</span>
+                            <div class="nameEmial mobile">
+                                <p id="nAME"></p>
+                                <small class="secEmail" id="email"></small>
+                            </div>
+                        </div>
+                        <div class="myProfile">
+                            <i class="fa-regular fa-user"></i>
+                            <p>My Profile</p>
+                        </div>
+                        <div class="logout" id="logout">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <p>Logout</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- <h3 id="vendorName"></h3> -->
+        </nav>
+        <section id="dashBoard">
+            <h1 class="pageName">Dashboard</h1>
+
+        </section>
+
+
+        <section class="content">
+
+        </section>
+
+
+
+    </main>
+
+
+
+
+
+
+
+    <script type="module" src="function/script.js"></script>
+</body>
+
+</html>

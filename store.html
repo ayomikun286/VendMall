@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vendor Store Test</title>
+</head>
+<body>
+  <h1 id="storeName">Store Products</h1>
+  <div id="products"></div>
+
+  <script>
+    // Step 1: Get storeSlug from URL
+    // Example URL: store.html?storeSlug=ayos-store&page=1&limit=5
+    const params = new URLSearchParams(window.location.search);
+    const storeSlug = params.get("storeSlug") || "ayos-store";
+    const page = params.get("page") || 1;
+    const limit = params.get("limit") || 10;
+
+    // Step 2: Call backend endpoint
+    fetch(`http://localhost:5000/store/${storeSlug}?page=${page}&limit=${limit}`)
+      .then(res => res.json())
+      .then(data => {
+        const productsDiv = document.getElementById("products");
+        document.getElementById("storeName").innerText = data.store.name;
+
+        if (!data.products.length) {
+          productsDiv.innerHTML = "<p>No products found.</p>";
+          return;
+        }
+
+        data.products.forEach(p => {
+          const div = document.createElement("div");
+          div.innerHTML = `<h3>${p.title}</h3><p>${p.description || ""}</p><p>Price: $${p.price}</p>`;
+          productsDiv.appendChild(div);
+        });
+      })
+      .catch(err => console.error(err));
+  </script>
+</body>
+</html>
