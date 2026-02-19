@@ -1,37 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src http://localhost:5000 http://127.0.0.1:5500; script-src 'self'; style-src 'self';">
-    <title>Document</title>
-  </head>
-  <body>
-    <script>
-      const params = new URLSearchParams(window.location.search);
-      const token = params.get("token");
 
-      if (token) {
-        localStorage.setItem("token", token);
-        alert('i got the token')
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
 
-        // Remove token from URL
-        window.history.replaceState(
-          {},
-          document.title,
-          window.location.pathname,
-        );
+<body
+  style="background-color: #EDF2F7; display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 15px;
+color: #576375; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+  <h3>VendMall</h3>
 
-        console.log("Token from URL:", token);
-localStorage.setItem("token", token);
-console.log("Token in localStorage:", localStorage.getItem("token"));
+  <div
+    style="background-color: white; padding: 10px;border-radius: 8px; display: flex; flex-direction: column; gap: 10px; ">
+    <h3>Hello!</h3>
+    <p>Please click the button below to verify your email address.</p>
 
+    <div style="display: flex; justify-content: center;">
+      <a href="${url}"><button
+          style="padding: 15px; border: none; background-color: #2D3748; color: white; border-radius: 8px;">Verify Email
+          Adddress</button></a>
+    </div>
 
-        // Redirect to dashboard
-        window.location.href = "http://127.0.0.1:5500/vendorDash/index.html";
-      } else {
-        document.body.innerHTML = "<h2>Verification failed</h2>";
-      }
-    </script>
-  </body>
+    <p>If you did not create an account, no further action is required.</p>
+    <p>Regards,<br> VendMall</p>
+  </div>
+
+  <small style="margin-top: 10px;">© 2026 VendMall. All rights reserved.</small>
+
+</body>
+
 </html>

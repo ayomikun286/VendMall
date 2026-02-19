@@ -65,7 +65,7 @@ export function CreateVendor() {
 
            if (res.ok) {
              const verifyCard = document.getElementById('verifyCard');
-
+                formDivCreate.style.display = "none";
                 verifyCard.style.display = "flex"
                 // message("Registration successful! Check your email to verify.", "success");
                  loader.style.display = "none";
@@ -89,11 +89,22 @@ export function CreateVendor() {
 
                     if (vendor.isVerified) {
                         clearInterval(interval);
+                             verifyCard.innerHTML =`
+                             <div class="envilop done">
+                                    <i class="fa-solid fa-check"></i>
 
+                                </div>
+                                <div class="messs">
+                                <h2>Email Verified Successfully</h2>
+                                    <p>You will be redirected to your dashboard shortly.</p>
+                            </div>
+                                                            
+                             `
+                             setTimeout(()=>{
+                                localStorage.setItem("token", token);
+                                window.location.href = "vendorDash/dashboard.html";
+                             },1500);
                         // loader.style.display = "none";
-                        localStorage.setItem("token", token);
-
-                        window.location.href = "vendorDash/dashboard.html";
                     }
 
                     } catch (err) {
