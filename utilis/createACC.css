@@ -364,12 +364,12 @@
 }
 
 .verifyCard .logOut{
-    background-color: oklch(0.557 0.245 27.325) ;
+    background-color: #e00000 ;
 }
 
 .envilop{
-    background-color:oklch(0.932 0.032 255.585) ;
-    color: oklch(0.546 0.245 262.881);
+    background-color:#dbeafe ;
+    color: #155dfb;
      width: 60px;
      height: 60px;
    display: flex;
@@ -390,8 +390,8 @@
 
 .envilop.done{
 
-     background-color:oklch(97.467% 0.04951 129.669) ;
-     color: oklch(87.552% 0.26408 137.566);
+     background-color:#ecfedb ;
+     color: #71fb15;
      font-size: 2.8rem;
 }
 
