@@ -2,6 +2,8 @@ export function profile(vendor) {
     const email = document.querySelectorAll('#email');
     const storeName = document.querySelectorAll('#storeName');
     const nAME = document.querySelectorAll('#nAME');
+
+   
     if (!email || !nAME || !storeName ) {
         return;
     }

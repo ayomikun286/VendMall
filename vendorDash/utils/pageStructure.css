@@ -14,9 +14,9 @@ body{
 
 }
 
-.hidden{
+/* .hidden{
     display: none;
-}
+} */
 
 
 aside {
@@ -414,6 +414,11 @@ section{
 }
 
 
+.verifyCard{
+
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.493);
+}
 
 @media (max-width:900px){
     .dashOption{

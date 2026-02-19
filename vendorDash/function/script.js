@@ -3,15 +3,16 @@ import{dashControl} from "./dashboard.js";
 import {profile} from "./profile.js";
 import {requireVendor} from "./authGuard.js";
 
-const vendor = requireVendor();
-if(!vendor){
-     throw new Error("No vendor found");
+async function initDashboard() {
+    const vendor = await requireVendor(); // wait for the API
+
+    if (!vendor) return; // requireVendor() already handles unauthorized
+
+    // document.body.classList.remove("hidden");
+    dashControl();
+    profile(vendor);
+    mobileNavBTN();
+    navFunction();
 }
 
-document.body.classList.remove("hidden")
-dashControl();
-profile(vendor)
-
-mobileNavBTN();
-
-navFunction();
+initDashboard();

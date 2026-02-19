@@ -1,4 +1,5 @@
 import { message } from "./alert.js";
+import {API_URL} from "./config.js";
 // import {generateUniqueStoreSlug} from "./generateStoreName.js"
 export function CreateVendor() {
 
@@ -46,9 +47,9 @@ export function CreateVendor() {
 
 
         try {
-            const res = await fetch("http://localhost:5000/api/auth/register", {
+            const res = await fetch( `${API_URL}api/auth/register`, {
                 method: "POST",
-                headers: { "content-Type": "application/json" },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ name, email, password, storeName })
 
             });
@@ -62,12 +63,45 @@ export function CreateVendor() {
 
             }
 
-            message("Registration successful! Check your email to verify.", "success");
+           if (res.ok) {
+             const verifyCard = document.getElementById('verifyCard');
 
-            setTimeout(() => {
-                // window.location.href = "login.html";
-                formDivCreate.reset();
-            }, 2500);
+                verifyCard.style.display = "flex"
+                // message("Registration successful! Check your email to verify.", "success");
+                 loader.style.display = "none";
+
+                const token = data.token;
+            // let verificationStarted = false;
+                const interval = setInterval(async () => {
+                    try {
+                    const checkRes = await fetch(`${API_URL}api/auth/me`, {
+                        headers: {
+                        "Authorization": `Bearer ${token}`,
+                        "Content-Type": "application/json"
+                        }
+                    });
+
+                    if (!checkRes.ok) return;
+
+                    const vendor = await checkRes.json();
+
+                    console.log("Polling... Verified:", vendor.isVerified);
+
+                    if (vendor.isVerified) {
+                        clearInterval(interval);
+
+                        // loader.style.display = "none";
+                        localStorage.setItem("token", token);
+
+                        window.location.href = "vendorDash/dashboard.html";
+                    }
+
+                    } catch (err) {
+                    console.log("Waiting for verification...");
+                    }
+                }, 3000);
+                }
+
 
         } catch (err) {
             loader.style.display = "none";
@@ -75,16 +109,7 @@ export function CreateVendor() {
 
         }
 
-        // message("Account created successfull", "success");
-
-        // setTimeout(() => {
-        //     loader.style.display = "none";
-        //     window.location.href = "vendorDash/index.html";
-        //     formDivCreate.reset();
-
-        // }, 3000)
-
-
+       
 
     });
 
