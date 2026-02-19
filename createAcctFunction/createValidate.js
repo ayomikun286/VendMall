@@ -69,7 +69,7 @@ export function CreateVendor() {
                 verifyCard.style.display = "flex"
                 // message("Registration successful! Check your email to verify.", "success");
                  loader.style.display = "none";
-
+                    localStorage.setItem('currentVendorEmail', email)
                 const token = data.token;
             // let verificationStarted = false;
                 const interval = setInterval(async () => {
@@ -126,26 +126,45 @@ export function CreateVendor() {
 
 
 
-    // function resendMail(){
-    //     const resendMaill = document.getElementById('resendMaill');
+    function resendMail(){
+        const resendMaill = document.getElementById('resendMaill');
+        const email = localStorage.getItem('currentVendorEmail');
 
-    //     if(!resendMaill){
-    //         return;
-    //     }
+        if(!resendMaill || !email){
+            return;
+        }
 
-    //     resendMaill.addEventListener('click', async ()=>{
-
-    //         try{
-
-    //         }catch(err){
-    //             console.log(err.message);
-    //         }
+        resendMaill.addEventListener('click', async ()=>{
 
 
 
-    //     })
 
-    // }
+            try{
 
+                const res = await fetch (`${API_URL}api/auth/resend-verification`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body:JSON.stringify({email})
+                });
+
+
+                const data = await res.json();
+
+                if(!res.ok) return;
+
+                alert('message resend')
+
+
+            }catch(err){
+                console.log(err.message);
+            }
+
+
+
+        })
+
+    }
+
+    resendMail()
 
 }
