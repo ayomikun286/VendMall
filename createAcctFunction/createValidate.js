@@ -125,4 +125,27 @@ export function CreateVendor() {
     });
 
 
+
+    // function resendMail(){
+    //     const resendMaill = document.getElementById('resendMaill');
+
+    //     if(!resendMaill){
+    //         return;
+    //     }
+
+    //     resendMaill.addEventListener('click', async ()=>{
+
+    //         try{
+
+    //         }catch(err){
+    //             console.log(err.message);
+    //         }
+
+
+
+    //     })
+
+    // }
+
+
 }
