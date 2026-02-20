@@ -89,6 +89,10 @@ export function CreateVendor() {
 
                     if (vendor.isVerified) {
                         clearInterval(interval);
+                                if (resendButton) {
+                                resendButton.disabled = true;
+                                resendButton.textContent = "Email Verified";
+                                 }
                              verifyCard.innerHTML =`
                              <div class="envilop done">
                                     <i class="fa-solid fa-check"></i>
@@ -129,7 +133,7 @@ export function CreateVendor() {
     function resendMail(){
         const resendMaill = document.getElementById('resendMaill');
         const email = localStorage.getItem('currentVendorEmail');
-
+            console.log(email)
         if(!resendMaill || !email){
             return;
         }
@@ -150,9 +154,14 @@ export function CreateVendor() {
 
                 const data = await res.json();
 
-                if(!res.ok) return;
-
-                alert('message resend')
+                if (!res.ok) {
+                console.log(data);
+                message(data.message || "Failed to resend verification email", "error")
+                alert(data.message || "Failed to resend verification email");
+                return;
+            }
+                     message(data.message || "Verification email resent successfully", "success")
+                
 
 
             }catch(err){
@@ -161,7 +170,7 @@ export function CreateVendor() {
 
 
 
-        })
+        });
 
     }
 
