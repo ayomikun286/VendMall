@@ -11,7 +11,7 @@ export function CreateVendor() {
     const confPass = document.getElementById('confPass');
     const agreeTerms = document.getElementById('agreeTerms');
     const loader = document.getElementById('loader');
-
+    const resendButton = document.getElementById('resendButton');
 
     if (!formDivCreate || !Name || !StoreName || !Email || !Pass || !confPass || !agreeTerms || !loader) {
         return;
@@ -112,7 +112,8 @@ export function CreateVendor() {
                     }
 
                     } catch (err) {
-                    console.log("Waiting for verification...");
+                    clearInterval(interval);
+                    console.log("Error checking verification:", err);
                     }
                 }, 3000);
                 }
@@ -120,7 +121,7 @@ export function CreateVendor() {
 
         } catch (err) {
             loader.style.display = "none";
-            message("Something went wrong. Try again.", "error");
+            message(err.message || "Something went wrong. Try again.", "error");
 
         }
 
@@ -140,7 +141,7 @@ export function CreateVendor() {
 
         resendMaill.addEventListener('click', async ()=>{
 
-
+                loader.style.display = "flex";
 
 
             try{
@@ -155,13 +156,18 @@ export function CreateVendor() {
                 const data = await res.json();
 
                 if (!res.ok) {
+                    loader.style.display = "none";
                 console.log(data);
                 message(data.message || "Failed to resend verification email", "error")
-                alert(data.message || "Failed to resend verification email");
+               
                 return;
             }
-                     message(data.message || "Verification email resent successfully", "success")
+                     
                 
+                     if(res.ok){
+                        loader.style.display = "none";
+                        message(data.message || "Verification email resent successfully", "success")
+                     }
 
 
             }catch(err){
