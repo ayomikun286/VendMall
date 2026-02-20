@@ -131,55 +131,49 @@ export function CreateVendor() {
 
 
 
-    function resendMail(){
-        const resendMaill = document.getElementById('resendMaill');
-        const email = localStorage.getItem('currentVendorEmail');
-            console.log(email)
-        if(!resendMaill || !email){
-            return;
-        }
+ function resendMail() {
+    const resendBtn = document.getElementById("resendMaill");
+    const email = localStorage.getItem("currentVendorEmail");
 
-        resendMaill.addEventListener('click', async ()=>{
+    if (!resendBtn || !email) return;
 
-                loader.style.display = "flex";
+    resendBtn.onclick = async () => {
+        resendBtn.disabled = true;
+        loader.style.display = "flex";
 
+        try {
+            const res = await fetch(`${API_URL}api/auth/resend-verification`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email })
+            });
 
-            try{
+            const data = await res.json();
 
-                const res = await fetch (`${API_URL}api/auth/resend-verification`, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body:JSON.stringify({email})
-                });
-
-
-                const data = await res.json();
-
-                if (!res.ok) {
-                    loader.style.display = "none";
-                console.log(data);
-                message(data.message || "Failed to resend verification email", "error")
-               
+            if (!res.ok) {
+                message(data.message || "Failed to resend verification email", "error");
+                resendBtn.disabled = false;
                 return;
             }
-                     
-                
-                     if(res.ok){
-                        loader.style.display = "none";
-                        message(data.message || "Verification email resent successfully", "success")
-                     }
+
+            message(data.message || "Verification email resent successfully", "success");
+
+            resendBtn.textContent = "Email Sent";
+            setTimeout(() => {
+                resendBtn.disabled = false;
+                resendBtn.textContent = "Resend Email";
+            }, 30000); // cooldown
+
+        } catch (err) {
+            console.error(err);
+            message("Network error. Try again.", "error");
+            resendBtn.disabled = false;
+        } finally {
+            loader.style.display = "none";
+        }
+    };
+}
 
 
-            }catch(err){
-                console.log(err.message);
-            }
-
-
-
-        });
-
-    }
-
-    resendMail()
-
+resendMail()
 }
