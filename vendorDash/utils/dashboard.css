@@ -58,6 +58,7 @@
 
 .BTNs button:nth-child(2){
     background-color: white;
+    color:black;
     
 
 }
@@ -411,7 +412,7 @@
     }
 
     .SMcard{
-        max-width:200px;
+        /* max-width:200px; */
         height: 300px;
     }
 
