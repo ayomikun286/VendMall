@@ -349,6 +349,7 @@
     padding:10px 12px;
     border-radius:10px ;
     font-weight: 600;
+    color: black;
 
 }
 
@@ -399,13 +400,14 @@
 
 
 @media (max-width:900px) {
-    .analyisCard.pro{
-        max-width: 450px;
+    .analyisCard{
+        max-width: 100%;
     }
 
     .analyisDiv{
         flex-direction: column;
         justify-content: center;
+        padding: 15px;
     }
 
     .SMcard{
@@ -416,7 +418,6 @@
     .dashDetailsCards{
         flex-wrap: wrap;
         justify-content: center;
-        padding: 15px;
     }
     
 }
