@@ -126,12 +126,12 @@
             <div class="dashBTN">
                 <div class="SM dash">
                     <div class="iTxt BTN">
-                       <i class="fa-solid fa-expand"></i>
+                        <i class="fa-solid fa-expand"></i>
                         <p>Referral Program</p>
                     </div>
                 </div>
             </div>
-             <div class="dashBTN">
+            <div class="dashBTN">
                 <div class="SM dash">
                     <div class="iTxt BTN">
                         <i class="fa-solid fa-gear"></i>
@@ -197,14 +197,172 @@
             <!-- <h3 id="vendorName"></h3> -->
         </nav>
         <section id="dashBoard">
-            <h1 class="pageName">Dashboard</h1>
+            <h2 class="pageName">Dashboard</h2>
+            <div class="dashDetailsCards">
+                <div class="card first">
+                    <h3>Good Morning <span id="vendName">edegbai</span></h3>
+                    <p style=" color: gray;">Have a nice day! Did you know that you can quickly add your favorite
+                        product or category to the
+                        store?</p>
+                    <div class="BTNs">
+                        <button><i class="fa-solid fa-plus"></i>
+                            <p>Quick Add</p>
+                        </button>
+                        <button><i class="fa-solid fa-up-right-from-square"></i>
+                            <p>Share Store</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="SMcard QR">
+                    <div class="QRcode" id="QRcode">
+
+                    </div>
+                    <button id="">
+                        <p>Store Link</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="SMcard product">
+                    <div class="textICON">
+                        <i class="fa-solid fa-cube" id="product"></i>
+                        <p>Total Products</p>
+                    </div>
+                    <div class="sparkline">
+                        <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                            <path d="M0 30 
+                            Q 25 10, 50 30 
+                            T 100 30 
+                            T 150 30 
+                            T 200 30" fill="none" stroke="#ff5a7a" stroke-width="3" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="numIcon">
+                        <h3>0</h3>
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+
+                </div>
+                <div class="SMcard sales">
+                    <div class="textICON">
+                        <i class="fa-solid fa-dollar-sign" id="sales"></i>
+                        <p>Total Sales</p>
+                    </div>
+                    <div class="sparkline">
+                        <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                            <path d="M0 30 
+                            Q 25 10, 50 30 
+                            T 100 30 
+                            T 150 30 
+                            T 200 30" fill="none" stroke="#22C58B" stroke-width="3" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="numIcon">
+                        <h3>₦0.00</h3>
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+
+                </div>
+                <div class="SMcard order">
+                    <div class="textICON">
+                        <i class="fa-solid fa-cart-arrow-down" id="order"></i>
+                        <p>Total Orders</p>
+                    </div>
+                    <div class="sparkline">
+                        <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                            <path d="M0 30 
+                            Q 25 10, 50 30 
+                            T 100 30 
+                            T 150 30 
+                            T 200 30" fill="none" stroke="#F59E0B" stroke-width="3" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="numIcon">
+                        <h3>0</h3>
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <div class="analyisDiv">
+                <div class="analyisCard pro">
+                    <h3>Storage Status</h3>
+                    <div class="useage">
+                        <small>Used: <span>0.01MB</span></small>
+                        <small>Total: <span>1024MB</span></small>
+                    </div>
+                    <div class="Progress">
+                        <div class="gauge">
+                            <svg viewBox="0 0 200 100">
+                                <!-- background arc -->
+                                <path d="M10 100 A90 90 0 0 1 190 100" class="bg" />
+
+                                <!-- progress arc -->
+                                <path d="M10 100 A90 90 0 0 1 190 100" class="progress" style="stroke-dashoffset: 283;"/>
+                            </svg>
+
+                            <div class="label">
+                                <div class="value">0%</div>
+                                <div class="text">Used</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="signDiv">
+                        <div class="signs">
+                            <div class="roundD">
+                                <span></span>
+                                <b>Used Storage</b>
+                            </div>
+
+                            <small>0.01MB</small>
+
+                        </div>
+                        <div class="signs avail">
+                            <div class="roundD">
+                                <span></span>
+                                <b>Available Storage</b>
+                            </div>
+
+                            <small>0.01MB</small>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="analyisCard top">
+                    <div class="proText">
+                         <h3>Top Products</h3>
+                         <button>View More <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    <div class="tablePro">
+                        <p>PRODUCT</p>
+                        <P>QUANTITY PRICE</P>
+                        <P>SALES</P>
+                    </div>
+                    <div class="noData">
+                        <div class="dAta">
+                             <i class="fa-solid fa-cube"></i>
+                             <small>No data available in table.</small>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
 
         </section>
 
 
-        <section class="content">
-
-        </section>
 
 
 

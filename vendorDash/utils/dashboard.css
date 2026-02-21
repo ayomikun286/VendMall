@@ -1,5 +1,422 @@
+:root{
+    --box-shadow:0px 0px 3px rgba(165, 164, 164, 0.815);;
+}
+
 .pageName{
-    font-weight: 400;
+    font-weight: 500;
     border-bottom: 1px solid rgba(128, 128, 128, 0.418);
     width: fit-content;
+}
+
+.dashDetailsCards{
+    display: flex;
+    gap: 20px;
+    height: auto;
+}
+
+.card{
+     border-radius: 12px;
+    padding: 10px;
+    box-shadow: var(--box-shadow)
+
+}
+
+.card.first{
+    background-color: #e6eef5c7;
+    border: 1px solid #e6eef5;
+    width: 100%;
+    min-width: 350px;
+    height: 220px;
+    line-height: 1.8;
+}
+
+.BTNs{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+   
+
+}
+
+
+.BTNs button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    border-radius: 12px;
+    background-color: orangered;
+    height: 35px;
+    padding: 0px 10px;
+    font-weight: 700;
+    box-shadow: var(--box-shadow);
+}
+
+.BTNs button:nth-child(1){
+     color: white;
+}
+
+.BTNs button:nth-child(2){
+    background-color: white;
+    
+
+}
+
+.card.first p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    
+}
+
+.SMcard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 180px;
+    min-width: 150px;
+     border-radius: 12px;
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+
+}
+
+.SMcard.QR{
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.QRcode{
+    width: 95%;
+      box-shadow: var(--box-shadow);
+    height: 100%;
+    border-radius: 10px;
+}
+
+.SMcard.QR button{
+    display: flex;
+    align-items: center;
+    height: 35px;
+    gap: 10px;
+     box-shadow: var(--box-shadow);
+     border: none;
+     border-radius: 10px;
+     background-color: transparent;
+ font-weight: 600;
+ color: gray;
+
+
+}
+
+
+.sparkline{
+    width: 100%;
+    height: 30px;
+  
+}
+
+.sparkline svg{
+    width: 100%;
+    height: 100%;
+}
+
+.textICON{
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    padding: 5px;
+    width: 100%;
+    gap: 10px;
+}
+
+.textICON i{
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.textICON p{
+    font-weight: 500;
+    line-height: 1.5;
+}
+ 
+.numIcon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+}
+
+.numIcon i{
+    font-size: 2.2rem;
+}
+
+.numIcon h3{
+    font-size: 1.5rem;
+}
+
+.SMcard.product{
+
+    background: linear-gradient(120deg,  #ff5a7b4b 50%,  #ff5a7b8c );
+}
+
+.SMcard.product i{
+    color: rgb(240, 72, 100);
+}
+
+#product{
+    background-color: #ff5a7b4b;
+}
+
+
+
+
+.SMcard.sales{
+
+ background: linear-gradient(120deg, #ECFDF5 50%, #a4ffd5 );
+}
+
+.SMcard.sales i{
+    color: #34D399;
+}
+
+#sales{
+   background-color: #c1fce0;
+}
+
+
+.SMcard.order {
+    background: linear-gradient(120deg, #FFFBEB 50%, #fae696 );
+}
+
+.SMcard.order i{
+    color: #FDBA74;
+}
+
+#order{
+    background-color: #fdeca9;
+}
+
+
+.analyisDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.analyisCard{
+    flex: 1;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    padding: 20px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.useage{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -15px;
+}
+
+/* ==================================PROGRESS ============= */
+
+.Progress{
+    height:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.gauge {
+  position: relative;
+  width: 350px;
+}
+
+.gauge svg {
+  width: 100%;
+  height: auto;
+}
+
+.bg {
+  fill: none;
+  stroke:#eee;
+  stroke-width: 18;
+  stroke-linecap: round;
+}
+
+.progress {
+  fill: none;
+  stroke: #22c55e; /* green */
+  stroke-width: 50;
+  stroke-linecap: round;
+  stroke-dasharray: 283;   /* half circumference */
+  transition: stroke-dashoffset 0.6s ease;
+}
+
+.label {
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+  text-align: center;
+}
+
+.value {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.text {
+  font-size: 14px;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+
+/* =================================== */
+.signDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.signs{
+    background-color: rgba(238, 238, 238, 0.521);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 12px;
+    height: 45px;
+
+}
+
+.signs.avail span{
+    background-color: rgb(179, 179, 179);
+
+}
+
+.roundD{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.roundD span{
+    background-color: green;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+
+}
+
+.roundD b{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+.analyisCard.top{
+   height: 470px;
+ 
+   width: 100%;
+}
+
+
+.proText{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.proText button{
+    border: 1px solid rgb(201, 201, 201);
+    background-color: transparent;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:10px 12px;
+    border-radius:10px ;
+    font-weight: 600;
+
+}
+
+
+.tablePro{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color:rgb(238, 238, 238);
+    border-radius: 13px;
+}
+
+.tablePro p{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.noData{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.dAta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: gray;
+
+}
+
+.dAta i{
+    font-size: 1.5rem;
+   background-color: rgb(226, 222, 222);
+  padding: 15px;
+  border-radius: 50%;
+
+}
+
+.dAta p{
+    font-size: 1.5rem;
+}
+
+
+
+@media (max-width:900px) {
+    .analyisCard.pro{
+        max-width: 450px;
+    }
+
+    .analyisDiv{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .SMcard{
+        max-width:200px;
+        height: 300px;
+    }
+
+    .dashDetailsCards{
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px;
+    }
+    
 }
