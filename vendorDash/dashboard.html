@@ -305,7 +305,8 @@
                                 <path d="M10 100 A90 90 0 0 1 190 100" class="bg" />
 
                                 <!-- progress arc -->
-                                <path d="M10 100 A90 90 0 0 1 190 100" class="progress" style="stroke-dashoffset: 283;"/>
+                                <path d="M10 100 A90 90 0 0 1 190 100" class="progress"
+                                    style="stroke-dashoffset: 283;" />
                             </svg>
 
                             <div class="label">
@@ -338,8 +339,8 @@
                 </div>
                 <div class="analyisCard top">
                     <div class="proText">
-                         <h3>Top Products</h3>
-                         <button>View More <i class="fa-solid fa-arrow-right"></i></button>
+                        <h3>Top Products</h3>
+                        <button>View More <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                     <div class="tablePro">
                         <p>PRODUCT</p>
@@ -348,8 +349,8 @@
                     </div>
                     <div class="noData">
                         <div class="dAta">
-                             <i class="fa-solid fa-cube"></i>
-                             <small>No data available in table.</small>
+                            <i class="fa-solid fa-cube"></i>
+                            <small>No data available in table.</small>
 
                         </div>
                     </div>
@@ -360,6 +361,73 @@
 
             </div>
 
+        </section>
+        <section>
+            <div class="orderOverview">
+                <div class="cardTITLE">
+                    <div class="orderTXT">
+                        <b>Orders Overview</b>
+                        <small>Last 14 days order trends</small>
+                    </div>
+                    <div class="roundTxt">
+                        <span></span>
+                        <small>Orders</small>
+
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="orderChart"></canvas>
+                    <b class="chartAmount">Amount</b>
+                </div>
+                <div class="dataAnlis">
+                    <div class="dataCard">
+                        <h1>0</h1>
+                        <p>Total Orders</p>
+                    </div>
+                    <div class="dataCard">
+                        <h1>₦0.00</h1>
+                        <p>Total Revenue</p>
+                    </div>
+                    <div class="dataCard">
+                        <h1>0</h1>
+                        <p>Total Products</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <div class="orderTable">
+                <div class="textBTN">
+                    <p>Recent Orders</p>
+                    <button>View All <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="7" style="text-align: center; color: gray; height:50px;">
+                                <small>No records found</small>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+        <section class="footer">
+            <small>© 2026 VendMall</small>
         </section>
 
 
@@ -373,7 +441,7 @@
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="function/script.js"></script>
 </body>
 

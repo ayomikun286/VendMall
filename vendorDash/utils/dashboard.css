@@ -1,5 +1,6 @@
 :root{
     --box-shadow:0px 0px 3px rgba(165, 164, 164, 0.815);;
+    --card-color:#eeeeee85;
 }
 
 .pageName{
@@ -291,7 +292,7 @@
 }
 
 .signs{
-    background-color: rgba(238, 238, 238, 0.521);
+    background-color:var(--card-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -359,7 +360,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color:rgb(238, 238, 238);
+    background-color:var(--card-color);
     border-radius: 13px;
 }
 
@@ -388,7 +389,7 @@
 
 .dAta i{
     font-size: 1.5rem;
-   background-color: rgb(226, 222, 222);
+   background-color: var(--card-color);
   padding: 15px;
   border-radius: 50%;
 
@@ -400,7 +401,183 @@
 
 
 
+
+/* ================================order chart ========== */
+
+
+.orderOverview{
+    box-shadow: var(--box-shadow);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.chart-container {
+      background:var(--card-color);
+      padding: 25px;
+      border-radius: 10px;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+      position: relative;
+    }
+
+    .chartAmount{
+        position: absolute;
+        transform: rotate(270deg);
+        left: -10px;
+        font-size: 0.8rem;
+    }
+
+    #orderChart{
+        width: 100%;
+    }
+
+
+    .cardTITLE{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: start;
+       
+    }
+
+    .cardTITLE small{
+        color: gray;
+    }
+
+    .roundTxt span{
+        background-color: orangered;
+        display: inline-block;
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+    }
+
+    .roundTxt{
+        display: flex;
+        align-items:center ;
+        gap: 10px;
+    }
+
+    .orderTXT{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    .dataAnlis{
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .dataAnlis .dataCard{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 320px;
+        border-radius: 12px;
+        box-shadow: var(--box-shadow);
+        background-color:var(--card-color);
+        height: 100px;
+        line-height: 0.2;
+
+    }
+
+    .dataAnlis .dataCard:nth-child(2) h1{
+        color: #22c55e;
+    }
+
+     .dataAnlis .dataCard:nth-child(3) h1{
+        color: rgb(66, 66, 248);
+     }
+    .dataCard p{
+        font-size: 12px;
+        font-weight: 500;
+    }
+/* ================================================= */
+
+
+/* ===========================order table================= */
+
+.orderTable{
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--box-shadow);
+    border-radius: 12px;
+    padding: 20px 25px;
+    gap: 20px;
+}
+
+.textBTN{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textBTN p{
+    font-weight: 600;
+}
+
+.textBTN button{
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    background-color: white;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 12px;
+    font-weight: 500;
+
+}
+
+table{
+    box-shadow: var(--box-shadow);
+    padding: 15px;
+    border-radius: 12px;
+     border-collapse: collapse;
+     overflow:hidden;
+
+}
+
+thead{
+    background-color: var(--card-color);
+    border-collapse: collapse;
+   height: 50px;
+   font-size: 0.9rem;
+   font-weight: 400;
+   
+}
+
 @media (max-width:900px) {
+
+    .orderOverview{
+        padding: 20px 20px ;
+    }
+
+    .orderTable{
+        padding: 20px 20px;
+    }
+
+    table{
+        overflow-x: scroll;
+    }
+
+    .dataCard h1{
+        font-size: 1.1rem;
+
+    }
     .analyisCard{
         max-width: 100%;
         padding: 20px 20px;
