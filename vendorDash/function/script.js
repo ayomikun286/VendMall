@@ -2,7 +2,8 @@ import {navFunction , mobileNavBTN} from "./layout.js";
 import{dashControl} from "./dashboard.js";
 import {profile} from "./profile.js";
 import {requireVendor} from "./authGuard.js";
-import {chartFunction} from "./orderChart.js"
+import {chartFunction} from "./orderChart.js";
+import {generateQRCode} from "./QRcode.js";
 
 async function initDashboard() {
     const vendor = await requireVendor(); // wait for the API
@@ -15,6 +16,9 @@ async function initDashboard() {
     mobileNavBTN();
     navFunction();
     chartFunction();
+    // Qcode(vendor);
+    console.log(vendor.storeSlug)
+    generateQRCode(vendor.storeSlug);
 }
 
 initDashboard();

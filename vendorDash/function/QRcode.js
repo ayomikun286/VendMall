@@ -1,0 +1,29 @@
+// export function Qcode(vendor){
+
+// console.log(vendor)
+// // Your store link// 
+//         const storeLink = `https://vend-mall.vercel.app/store.html?vendor=${vendor.storeSlug}`;
+
+// // Generate QR code
+//             const qrcode = new QRCode(document.getElementById("qrcode"), {
+//             text: storeLink,
+//             width: 150,      // QR code width
+//             height: 150,     // QR code height
+//             colorDark: "#000000",
+//             colorLight: "#ffffff",
+//             correctLevel: QRCode.CorrectLevel.H
+//             });
+
+// }
+
+
+export function generateQRCode(vendorSlug) {
+  document.getElementById("qrcode").innerHTML = ""; // Clear previous
+  new QRCode(document.getElementById("qrcode"), {
+    text: `https://vend-mall.vercel.app/store.html?vendor=${vendorSlug}`,
+    width: 100,
+    height: 100
+  });
+}
+
+// Example usage

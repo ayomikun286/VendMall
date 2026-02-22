@@ -2,6 +2,20 @@
     box-sizing: border-box;
 }
 
+
+:root{
+
+     --error-bg: #FDECEC;
+  --error-text: #B42318;
+  --error-border: #F5A3A3;
+
+
+  /* success message */
+   --success-bg: #ECFDF3;
+  --success-text: #027A48;
+  --success-border: #6CE9A6;
+}
+
 body{
     padding: 0px;
     margin: 0px;
@@ -427,6 +441,36 @@ section{
     position: fixed;
     background-color: rgba(0, 0, 0, 0.493);
 }
+
+
+/* =========alert div ================= */
+#msg {
+      display: none;
+      position: fixed;
+      background-color: white;
+      padding: 10px;
+      pointer-events: none;
+      border-radius: 10px;
+      top: 100px;
+      right: 30px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.411);
+  }
+
+  .errorMsg {
+      /* border: 1px solid var( --error-border); */
+      color: var(--error-text);
+      background-color: var(--error-bg);
+  }
+
+  .successMsg {
+      /* border: 1px solid var(--success-border); */
+      color: var(--success-text);
+      background-color: var(--success-bg);
+  }
+/* ======================================================= */
+
 
 @media (max-width:900px){
     .dashOption{
