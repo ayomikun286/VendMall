@@ -21,8 +21,8 @@ export function generateQRCode(vendorSlug) {
   document.getElementById("qrcode").innerHTML = ""; // Clear previous
   new QRCode(document.getElementById("qrcode"), {
     text: `https://vend-mall.vercel.app/store.html?vendor=${vendorSlug}`,
-    width: 120,
-    height: 120
+    width: 130,
+    height: 130
   });
 }
 
