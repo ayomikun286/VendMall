@@ -34,7 +34,7 @@ export function dashControl(){
     });
 
     logout.addEventListener('click', ()=>{
-        localStorage.removeItem('currentVendor');
+        localStorage.removeItem('token');
         window.location.href = " ../login.html";
     })
 

@@ -1,5 +1,623 @@
+:root{
+    --box-shadow:0px 0px 3px rgba(165, 164, 164, 0.815);;
+    --card-color:#eeeeee85;
+}
+
 .pageName{
-    font-weight: 400;
+    font-weight: 500;
     border-bottom: 1px solid rgba(128, 128, 128, 0.418);
     width: fit-content;
+}
+
+.dashDetailsCards{
+    display: flex;
+    gap: 20px;
+    height: auto;
+}
+
+.card{
+     border-radius: 12px;
+    padding: 10px;
+    box-shadow: var(--box-shadow)
+
+}
+
+#vendName{
+    color: orangered;
+}
+
+.card.first{
+    background-color: #e6eef5c7;
+    border: 1px solid #e6eef5;
+    width: 100%;
+    min-width: 350px;
+    height: 220px;
+    line-height: 1.8;
+}
+
+.BTNs{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+   
+
+}
+
+
+.BTNs button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    border-radius: 12px;
+    background-color: orangered;
+    height: 35px;
+    padding: 0px 10px;
+    font-weight: 700;
+    box-shadow: var(--box-shadow);
+}
+
+.BTNs button:nth-child(1){
+     color: white;
+}
+
+.BTNs button:nth-child(2){
+    background-color: white;
+    color:black;
+    
+
+}
+
+.card.first p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    
+}
+
+.SMcard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height:220px;
+    max-width: 180px;
+    min-width: 150px;
+     border-radius: 12px;
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+
+}
+
+.SMcard.QR{
+    justify-content: space-between;
+     padding: 20px 10px;
+}
+
+.QRcode{
+      box-shadow: var(--box-shadow);
+         padding: 5px;
+            border-radius: 10px;
+            width: 100;
+            height: 100;
+}
+button{
+    cursor: pointer;
+}
+
+.SMcard.QR #copyLink{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 35px;
+    padding: 12px 15px;
+     box-shadow: var(--box-shadow);
+     border: none;
+     border-radius: 10px;
+     background-color: white;
+ font-weight: 500;
+ font-size: 0.8rem;
+ color: gray;
+ justify-content: space-between;
+
+
+}
+
+#copyLink svg{
+
+    width: 20px;
+
+}
+
+
+
+
+.sparkline{
+    width: 100%;
+    height: 30px;
+  
+}
+
+.sparkline svg{
+    width: 100%;
+    height: 100%;
+}
+
+.textICON{
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    padding: 5px;
+    width: 100%;
+    gap: 10px;
+}
+
+.textICON i{
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.textICON p{
+    font-weight: 500;
+    line-height: 1.5;
+}
+ 
+.numIcon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+}
+
+.numIcon i{
+    font-size: 2.2rem;
+}
+
+.numIcon h3{
+    font-size: 1.5rem;
+}
+
+.SMcard.product{
+
+    background: linear-gradient(120deg,  #ff5a7b4b 50%,  #ff5a7b8c );
+}
+
+.SMcard.product i{
+    color: rgb(240, 72, 100);
+}
+
+#product{
+    background-color: #ff5a7b4b;
+}
+
+
+
+
+.SMcard.sales{
+
+ background: linear-gradient(120deg, #ECFDF5 50%, #a4ffd5 );
+}
+
+.SMcard.sales i{
+    color: #34D399;
+}
+
+#sales{
+   background-color: #c1fce0;
+}
+
+
+.SMcard.order {
+    background: linear-gradient(120deg, #FFFBEB 50%, #fae696 );
+}
+
+.SMcard.order i{
+    color: #FDBA74;
+}
+
+#order{
+    background-color: #fdeca9;
+}
+
+
+.analyisDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.analyisCard{
+    flex: 1;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    padding: 20px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.useage{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -15px;
+}
+
+/* ==================================PROGRESS ============= */
+
+.Progress{
+    height:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.gauge {
+  position: relative;
+  width: 350px;
+}
+
+.gauge svg {
+  width: 100%;
+  height: auto;
+}
+
+.bg {
+  fill: none;
+  stroke:#eee;
+  stroke-width: 18;
+  stroke-linecap: round;
+}
+
+.progress {
+  fill: none;
+  stroke: #22c55e; /* green */
+  stroke-width: 50;
+  stroke-linecap: round;
+  stroke-dasharray: 283;   /* half circumference */
+  transition: stroke-dashoffset 0.6s ease;
+}
+
+.label {
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+  text-align: center;
+}
+
+.value {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.text {
+  font-size: 14px;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+
+/* =================================== */
+.signDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.signs{
+    background-color:var(--card-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 12px;
+    height: 45px;
+
+}
+
+.signs.avail span{
+    background-color: rgb(179, 179, 179);
+
+}
+
+.roundD{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.roundD span{
+    background-color: green;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+
+}
+
+.roundD b{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+.analyisCard.top{
+   height: 470px;
+ 
+   width: 100%;
+}
+
+
+.proText{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.proText button{
+    border: 1px solid rgb(201, 201, 201);
+    background-color: transparent;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:10px 12px;
+    border-radius:10px ;
+    font-weight: 600;
+    color: black;
+
+}
+
+
+.tablePro{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color:var(--card-color);
+    border-radius: 13px;
+}
+
+.tablePro p{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.noData{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.dAta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: gray;
+
+}
+
+.dAta i{
+    font-size: 1.5rem;
+   background-color: var(--card-color);
+  padding: 15px;
+  border-radius: 50%;
+
+}
+
+.dAta p{
+    font-size: 1.5rem;
+}
+
+
+
+
+/* ================================order chart ========== */
+
+
+.orderOverview{
+    box-shadow: var(--box-shadow);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.chart-container {
+      background:var(--card-color);
+      padding: 25px;
+      border-radius: 10px;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+      position: relative;
+    }
+
+    .chartAmount{
+        position: absolute;
+        transform: rotate(270deg);
+        left: -10px;
+        font-size: 0.8rem;
+    }
+
+    #orderChart{
+        width: 100%;
+    }
+
+
+    .cardTITLE{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: start;
+       
+    }
+
+    .cardTITLE small{
+        color: gray;
+    }
+
+    .roundTxt span{
+        background-color: orangered;
+        display: inline-block;
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+    }
+
+    .roundTxt{
+        display: flex;
+        align-items:center ;
+        gap: 10px;
+    }
+
+    .orderTXT{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    .dataAnlis{
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .dataAnlis .dataCard{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 320px;
+        border-radius: 12px;
+        box-shadow: var(--box-shadow);
+        background-color:var(--card-color);
+        height: 100px;
+        line-height: 0.2;
+
+    }
+
+    .dataAnlis .dataCard:nth-child(2) h1{
+        color: #22c55e;
+    }
+
+     .dataAnlis .dataCard:nth-child(3) h1{
+        color: rgb(66, 66, 248);
+     }
+    .dataCard p{
+        font-size: 12px;
+        font-weight: 500;
+    }
+/* ================================================= */
+
+
+/* ===========================order table================= */
+
+.orderTable{
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--box-shadow);
+    border-radius: 12px;
+    padding: 20px 25px;
+    gap: 20px;
+}
+
+.textBTN{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textBTN p{
+    font-weight: 600;
+}
+
+.textBTN button{
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    background-color: white;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 12px;
+    font-weight: 500;
+    color: black;
+
+}
+
+table{
+    box-shadow: var(--box-shadow);
+    padding: 15px;
+    border-radius: 12px;
+     border-collapse: collapse;
+     overflow:hidden;
+
+}
+
+thead{
+    background-color: var(--card-color);
+    border-collapse: collapse;
+   height: 50px;
+   font-size: 0.9rem;
+   font-weight: 400;
+   
+}
+
+@media (max-width:900px) {
+
+    .orderOverview{
+        padding: 20px 20px ;
+    }
+
+    .orderTable{
+        padding: 20px 20px;
+    }
+
+    table{
+        overflow-x: scroll;
+    }
+
+    .dataCard h1{
+        font-size: 1.1rem;
+
+    }
+    .analyisCard{
+        max-width: 100%;
+        padding: 20px 20px;
+    }
+
+    .analyisDiv{
+        flex-direction: column;
+        justify-content: center;
+        padding: 1px;
+    }
+
+    .SMcard{
+        /* max-width:200px; */
+        height: 300px;
+    }
+
+    .dashDetailsCards{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
 }

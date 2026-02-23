@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src http://localhost:5000 http://127.0.0.1:5500; script-src 'self'; style-src 'self';"> -->
+    <title>VendMall - Dashboard</title>
+    <link rel="stylesheet" href="utils/pageStructure.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="utils/dashboard.css">
+</head>
+
+<body class="hidden">
+    <aside id="aside">
+        <div class="logo" id="logo">
+            <img src="utils/images/site_logo.png" alt="VendMall" id="logoIcon">
+            <button id="closrMnav">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="Store" id="Store">
+            <small>Store</small>
+            <div class="navBTN" id="StorePop">
+                <div class="iTxt">
+                    <i class="fa-solid fa-shop"></i>
+                    <b id="storeName"></b>
+                </div>
+                <i class="fa-solid fa-angle-down" id="storeArrow"></i>
+            </div>
+            <div class="popUp" id="popUp">
+                <div class="SM">
+                    <div class="iTxt">
+                        <i class="fa-solid fa-shop"></i>
+                        <b id="storeName"></b>
+                    </div>
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <div class="createStore">
+                    <i class="fa-solid fa-plus"></i>
+                    <p>Create New store</p>
+                </div>
+            </div>
+        </div>
+        <div class="navigations">
+            <div class="dashBTN" id="dashDrop">
+                <div class="SM dash" id="dashClick">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-house"></i>
+                        <p>Dashboard</p>
+                    </div>
+                    <i class="fa-solid fa-angle-down" id="dashARROW"></i>
+                </div>
+                <div class="dashOption">
+                    <p>Dashboard</p>
+                    <p>Store Analytics</p>
+                    <p>Oprders</p>
+                </div>
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-table-cells"></i>
+                        <p>Themes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashBTN" id="staffDrop">
+                <div class="SM dash" id="staffClick">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-user-group"></i>
+                        <p>Staff</p>
+                    </div>
+                    <i class="fa-solid fa-angle-down" id="staffArrow"></i>
+                </div>
+                <div class="dashOption">
+                    <p>Roles</p>
+                    <p>User</p>
+                </div>
+
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-desktop"></i>
+                        <p>Pos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashBTN" id="shopDrop">
+                <div class="SM dash" id="shopClick">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <p>Shop</p>
+                    </div>
+                    <i class="fa-solid fa-angle-down" id="shopArrow"></i>
+                </div>
+                <div class="dashOption">
+                    <p>Products</p>
+                    <p>Product Category</p>
+                    <p>Product Tax</p>
+                    <p>Product Coupon</p>
+                    <p>Subscriber</p>
+                    <p>Testimonials</p>
+                </div>
+
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-regular fa-user"></i>
+                        <p>Custormers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-trophy"></i>
+                        <p>Plans</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-expand"></i>
+                        <p>Referral Program</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-gear"></i>
+                        <p>Store Settings</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </aside>
+    <main>
+        <nav>
+            <div class="swich">
+                <button id="close" class="destop">
+                    <i class="fa-solid fa-table-columns"></i>
+                </button>
+                <button id="navmoblieBTN">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="line" style="width: 1px; height: 15px;background-color: rgba(128, 128, 128, 0.548);"></div>
+                <div class="swichText">
+                    <p>Home</p>
+                    <i class="fa-solid fa-greater-than"></i>
+                    <span id="page">Dashboard</span>
+                </div>
+            </div>
+            <div class="swich2">
+                <button id="language">
+                    <p>English</p>
+                    <i class="fa-solid fa-angle-down"></i>
+                </button>
+                <div class="profileSwich" id="profileSwich">
+                    <span id="sliceName">ed</span>
+                    <div class="nameEmial">
+                        <p id="nAME"></p>
+                        <small id="email"></small>
+                    </div>
+                    <i class="fa-solid fa-angle-down" id="profileArrow" style="font-size: 0.8rem;"></i>
+
+                    <div class="profileDrop" id="profileDrop">
+                        <div class="NameEmail">
+                            <span id="sliceName">ed</span>
+                            <div class="nameEmial mobile">
+                                <p id="nAME"></p>
+                                <small class="secEmail" id="email"></small>
+                            </div>
+                        </div>
+                        <div class="myProfile">
+                            <i class="fa-regular fa-user"></i>
+                            <p>My Profile</p>
+                        </div>
+                        <div class="logout" id="logout">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <p>Logout</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- <h3 id="vendorName"></h3> -->
+        </nav>
+        <section id="dashBoard">
+            <h2 class="pageName">Dashboard</h2>
+            <div class="dashDetailsCards">
+                <div class="card first">
+                    <h3>Good Morning, <span id="vendName">edegbai</span></h3>
+                    <p style=" color: gray;">Have a nice day! Did you know that you can quickly add your favorite
+                        product or category to the
+                        store?</p>
+                    <div class="BTNs">
+                        <button><i class="fa-solid fa-plus"></i>
+                            <p>Quick Add</p>
+                        </button>
+                        <button id="share-store"><i class="fa-solid fa-up-right-from-square"></i>
+                            <p>Share Store</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="SMcard QR">
+                    <div class="QRcode" id="qrcode">
+
+                    </div>
+                    <button id="copyLink">
+                        <p>Store Link</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="SMcard product">
+                    <div class="textICON">
+                        <i class="fa-solid fa-cube" id="product"></i>
+                        <p>Total Products</p>
+                    </div>
+                    <div class="sparkline">
+                        <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                            <path d="M0 30 
+                            Q 25 10, 50 30 
+                            T 100 30 
+                            T 150 30 
+                            T 200 30" fill="none" stroke="#ff5a7a" stroke-width="3" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="numIcon">
+                        <h3>0</h3>
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+
+                </div>
+                <div class="SMcard sales">
+                    <div class="textICON">
+                        <i class="fa-solid fa-dollar-sign" id="sales"></i>
+                        <p>Total Sales</p>
+                    </div>
+                    <div class="sparkline">
+                        <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                            <path d="M0 30 
+                            Q 25 10, 50 30 
+                            T 100 30 
+                            T 150 30 
+                            T 200 30" fill="none" stroke="#22C58B" stroke-width="3" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="numIcon">
+                        <h3>₦0.00</h3>
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+
+                </div>
+                <div class="SMcard order">
+                    <div class="textICON">
+                        <i class="fa-solid fa-cart-arrow-down" id="order"></i>
+                        <p>Total Orders</p>
+                    </div>
+                    <div class="sparkline">
+                        <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                            <path d="M0 30 
+                            Q 25 10, 50 30 
+                            T 100 30 
+                            T 150 30 
+                            T 200 30" fill="none" stroke="#F59E0B" stroke-width="3" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="numIcon">
+                        <h3>0</h3>
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <div class="analyisDiv">
+                <div class="analyisCard pro">
+                    <h3>Storage Status</h3>
+                    <div class="useage">
+                        <small>Used: <span>0.01MB</span></small>
+                        <small>Total: <span>1024MB</span></small>
+                    </div>
+                    <div class="Progress">
+                        <div class="gauge">
+                            <svg viewBox="0 0 200 100">
+                                <!-- background arc -->
+                                <path d="M10 100 A90 90 0 0 1 190 100" class="bg" />
+
+                                <!-- progress arc -->
+                                <path d="M10 100 A90 90 0 0 1 190 100" class="progress"
+                                    style="stroke-dashoffset: 283;" />
+                            </svg>
+
+                            <div class="label">
+                                <div class="value">0%</div>
+                                <div class="text">Used</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="signDiv">
+                        <div class="signs">
+                            <div class="roundD">
+                                <span></span>
+                                <b>Used Storage</b>
+                            </div>
+
+                            <small>0.01MB</small>
+
+                        </div>
+                        <div class="signs avail">
+                            <div class="roundD">
+                                <span></span>
+                                <b>Available Storage</b>
+                            </div>
+
+                            <small>1024MB</small>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="analyisCard top">
+                    <div class="proText">
+                        <h3>Top Products</h3>
+                        <button>View More <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    <div class="tablePro">
+                        <p>PRODUCT</p>
+                        <P>QUANTITY PRICE</P>
+                        <P>SALES</P>
+                    </div>
+                    <div class="noData">
+                        <div class="dAta">
+                            <i class="fa-solid fa-cube"></i>
+                            <small>No data available in table.</small>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+        <section>
+            <div class="orderOverview">
+                <div class="cardTITLE">
+                    <div class="orderTXT">
+                        <b>Orders Overview</b>
+                        <small>Last 14 days order trends</small>
+                    </div>
+                    <div class="roundTxt">
+                        <span></span>
+                        <small>Orders</small>
+
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="orderChart"></canvas>
+                    <b class="chartAmount">Amount</b>
+                </div>
+                <div class="dataAnlis">
+                    <div class="dataCard">
+                        <h1>0</h1>
+                        <p>Total Orders</p>
+                    </div>
+                    <div class="dataCard">
+                        <h1>₦0.00</h1>
+                        <p>Total Revenue</p>
+                    </div>
+                    <div class="dataCard">
+                        <h1>0</h1>
+                        <p>Total Products</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <div class="orderTable">
+                <div class="textBTN">
+                    <p>Recent Orders</p>
+                    <button>View All <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="7" style="text-align: center; color: gray; height:50px;">
+                                <small>No records found</small>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+        <section class="footer">
+            <small>© 2026 VendMall</small>
+        </section>
+
+
+
+
+             <div id="msg">hello</div>
+    </main>
+
+    
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="function/script.js"></script>
+</body>
+
+</html>

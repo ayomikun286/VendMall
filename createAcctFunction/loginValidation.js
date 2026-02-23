@@ -1,4 +1,5 @@
-import {message} from "./alert.js"
+import {message} from "./alert.js";
+import {API_URL} from "./config.js";
 
 export function loginVendor(){
 
@@ -9,7 +10,7 @@ export function loginVendor(){
 
     if(!formLogin || !EmailLogin || !PassLogin){return;}
 
-    formLogin.addEventListener('submit', (e)=>{
+    formLogin.addEventListener('submit', async (e)=>{
 
         e.preventDefault();
 
@@ -24,26 +25,63 @@ export function loginVendor(){
 
         loader.style.display = "flex";
 
-        let vendors = JSON.parse(localStorage.getItem("vendors")) || [];
+
+        
+        try {
+
+            const res = await fetch (`${API_URL}api/auth/login`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+              body: JSON.stringify ({email, password})
+
+            });
 
 
-        const vendor = vendors.find(v => v.email === email && v.password === password);
+            const data = await res.json();
+            console.log("Login response:", res.status, data);
 
+            if(!res.ok){
+                  loader.style.display = "none"
+                   message(data.message || "fail to fetch", "error");
+                    return;
+            }
 
-        if(!vendor){
-            loader.style.display = "none"
-            message("Invalid email or password", "error");
-            return;
-        }
+             localStorage.setItem("token", data.token);
 
-        localStorage.setItem("currentVendor", JSON.stringify(vendor));
-
-          message("Login successful", "success");
+             
+                message("Login successful", "success");
         
         setTimeout(()=>{
             loader.style.display = "none"
-            window.location.href = "vendorDash/index.html";
+             window.location.href = "vendorDash/dashboard.html";
         },2000);
+
+
+
+        }catch(err){
+                 loader.style.display = "none"
+             message(err.message || "fale to fetch", "error");
+
+        }
+       
+
+
+
+        
+
+
+        // if(!vendor){
+        //     loader.style.display = "none"
+        //     message("Invalid email or password", "error");
+        //     return;
+        // }
+
+      
+        
+
+
+
+
 
        
 
