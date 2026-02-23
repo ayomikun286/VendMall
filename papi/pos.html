@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pageStructure.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="pos.css">
+</head>
+
+<body>
+    <aside id="aside">
+        <div class="logo">
+            <img src="utils/images/site_logo.png" alt="VendMall">
+            <button id="closrMnav">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="Store" id="Store">
+            <small>Store</small>
+            <div class="navBTN" id="StorePop">
+                <div class="iTxt">
+                    <i class="fa-solid fa-shop"></i>
+                    <b id="storeName"></b>
+                </div>
+                <i class="fa-solid fa-angle-down" id="storeArrow"></i>
+            </div>
+            <div class="popUp" id="popUp">
+                <div class="SM">
+                    <div class="iTxt">
+                        <i class="fa-solid fa-shop"></i>
+                        <b id="storeName"></b>
+                    </div>
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <div class="createStore">
+                    <i class="fa-solid fa-plus"></i>
+
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main>
+        <nav>
+            <div class="swich">
+                <button id="close" class="destop">
+                    <i class="fa-solid fa-table-columns"></i>
+                </button>
+                <button id="navmoblieBTN">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <p>Create New store</p>
+
+
+                <div class="line" style="width: 1px; height: 15px;background-color: rgba(128, 128, 128, 0.548);"></div>
+                <div class="swichText">
+                    <p>Home</p>
+                    <i class="fa-solid fa-greater-than"></i>
+                    <span id="page">Dashboard</span>
+                </div>
+            </div>
+            <div class="swich2">
+                <button id="language">
+                    <p>English</p>
+                    <i class="fa-solid fa-angle-down"></i>
+                </button>
+                <div class="profileSwich" id="profileSwich">
+                    <span>ed</span>
+                    <div class="nameEmial">
+                        <p id="nAME"></p>
+                        <small id="email"></small>
+                    </div>
+                    <i class="fa-solid fa-angle-down" id="profileArrow" style="font-size: 0.8rem;"></i>
+
+                    <div class="profileDrop" id="profileDrop">
+                        <div class="NameEmail">
+                            <span>ed</span>
+                            <div class="nameEmial mobile">
+                                <p id="nAME"></p>
+                                <small id="email"></small>
+                            </div>
+                        </div>
+                        <div class="myProfile">
+                            <i class="fa-regular fa-user"></i>
+                            <p>My Profile</p>
+                        </div>
+                        <div class="logout" id="logout">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <p>Logout</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- <h3 id="vendorName"></h3> -->
+        </nav>
+        <section>
+            <h1>POS</h1>
+            <div class="divider1"></div>
+
+            <div class="cards">
+
+                <div class="card1">
+                    <input type="text" id="search" placeholder="Search product...">
+                    <div class="btn">
+                        <button class="all">All</button>
+                        <button class="wear">Wears</button>
+                    </div>
+                    <div class="divider2"></div>
+                    <div class="cart1">
+                        <i class="fa-solid fa-cube"></i>
+                        <p>No Product Available
+
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="card2">
+                    <div class="hold">
+                        <div class="funds">
+                            <label for="">Customer</label>
+                            <input type="type" id="customer" placeholder="+    Add New Customer">
+                        </div>
+                        <input type="text" id="hood">
+                        <div class="divider3"></div>
+                    </div>
+                    <div class="select">
+                        <h2>Selected Products</h2>
+                        <button class="item">0 items</button>
+                    </div>
+                    <div class="cart">
+                        <i class="fa-solid fa-cart-arrow-down"></i>
+                        <h2>Your cart is empty</h2>
+                        <p>Add products to your cart to begin checkout
+
+                        </p>
+                        <div class="divider4"></div>
+                    </div>
+
+                    <div class="dis">
+                        <p>Discount:</p>
+                        <button class="zeh">0</button>
+                    </div>
+                    <div class="sub">
+                        <p>Subtotal:</p>
+                        <p class="ro">₦0.00</p>
+                    </div>
+                    <div class="divider5"></div>
+                    <div class="naira">
+                        <p>Total:</p>
+                        <p class="roi">₦0.00</p>
+                    </div>
+                    <div class="many">
+                        <button id="empty">
+                            <i class="fa-solid fa-trash-can"></i> Empty Cart
+                        </button>
+                        <button id="pay">
+                            <i class="fa-regular fa-credit-card"></i> Pay Now
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
