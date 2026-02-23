@@ -12,8 +12,8 @@ export function chartFunction(){
         ],
         datasets: [{
           label: 'Amount',
-          data: [0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0],
-          borderColor: 'orange',
+          data: [1, 2, 5, 0, 3, 0, 8, 0, 0, 0, 0, 0, 0, 0],
+          borderColor: 'orangered',
           backgroundColor: 'rgba(255,165,0,0.2)',
           tension: 0.4
         }]

@@ -12,6 +12,7 @@ async function initDashboard() {
     if (!vendor) return; // requireVendor() already handles unauthorized
 
     document.body.classList.remove("hidden");
+    
     dashControl();
     profile(vendor);
     mobileNavBTN();

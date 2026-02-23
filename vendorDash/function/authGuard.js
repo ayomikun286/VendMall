@@ -5,11 +5,6 @@ export async function requireVendor() {
             console.log(token)
         if (!token) {
             window.location.href = "../login.html";
-            //  document.body.innerHTML = `
-            //     <h2>Please verify your email first</h2>
-            //     <p>Check your inbox for the verification link.</p>
-            // `;
-            
             return null;
         }
 
