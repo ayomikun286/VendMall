@@ -1,5 +1,6 @@
 import {API_URL} from "./config.js"
 export async function requireVendor() {
+    const loaderDiv = document.getElementById('loaderDiv');
     try {
         const token = localStorage.getItem("token");
             console.log(token)
@@ -20,6 +21,7 @@ export async function requireVendor() {
             throw new Error("Not authorized");
         }
 
+        loaderDiv.style.display = "none";
         const data = await response.json();
         
         console.log(data);

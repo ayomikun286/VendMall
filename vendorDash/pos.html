@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="pageStructure.css">
+ <title>VendMall - Dashboard</title>
+    <link rel="stylesheet" href="utils/pageStructure.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="pos.css">
+    <link rel="stylesheet" href="utils/pos.css">
 </head>
 
 <body>
     <aside id="aside">
-        <div class="logo">
-            <img src="utils/images/site_logo.png" alt="VendMall">
+        <div class="logo" id="logo">
+            <img src="utils/images/site_logo.png" alt="VendMall" id="logoIcon">
             <button id="closrMnav">
                 <i class="fa-solid fa-xmark"></i>
             </button>
@@ -39,10 +39,108 @@
                 </div>
                 <div class="createStore">
                     <i class="fa-solid fa-plus"></i>
-
+                    <p>Create New store</p>
                 </div>
             </div>
         </div>
+        <div class="navigations">
+            <div class="dashBTN" id="dashDrop">
+                <div class="SM dash" id="dashClick">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-house"></i>
+                        <p>Dashboard</p>
+                    </div>
+                    <i class="fa-solid fa-angle-down" id="dashARROW"></i>
+                </div>
+                <div class="dashOption">
+                    <p id="dashBoard" >Dashboard</p>
+                    <p>Store Analytics</p>
+                    <p>Orders</p>
+                </div>
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-table-cells"></i>
+                        <p>Themes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashBTN" id="staffDrop">
+                <div class="SM dash" id="staffClick">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-user-group"></i>
+                        <p>Staff</p>
+                    </div>
+                    <i class="fa-solid fa-angle-down" id="staffArrow"></i>
+                </div>
+                <div class="dashOption">
+                    <p id="Roles">Roles</p>
+                    <p>User</p>
+                </div>
+
+            </div>
+            <div class="dashBTN" id="POS">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-desktop"></i>
+                        <p>Pos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashBTN" id="shopDrop">
+                <div class="SM dash" id="shopClick">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <p>Shop</p>
+                    </div>
+                    <i class="fa-solid fa-angle-down" id="shopArrow"></i>
+                </div>
+                <div class="dashOption">
+                    <p>Products</p>
+                    <p>Product Category</p>
+                    <p>Product Tax</p>
+                    <p>Product Coupon</p>
+                    <p>Subscriber</p>
+                    <p>Testimonials</p>
+                </div>
+
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-regular fa-user"></i>
+                        <p>Custormers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-trophy"></i>
+                        <p>Plans</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-expand"></i>
+                        <p>Referral Program</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-gear"></i>
+                        <p>Store Settings</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </aside>
     <main>
         <nav>
@@ -53,8 +151,6 @@
                 <button id="navmoblieBTN">
                     <i class="fa-solid fa-bars"></i>
                 </button>
-                <p>Create New store</p>
-
 
                 <div class="line" style="width: 1px; height: 15px;background-color: rgba(128, 128, 128, 0.548);"></div>
                 <div class="swichText">
@@ -69,7 +165,7 @@
                     <i class="fa-solid fa-angle-down"></i>
                 </button>
                 <div class="profileSwich" id="profileSwich">
-                    <span>ed</span>
+                    <span id="sliceName">ed</span>
                     <div class="nameEmial">
                         <p id="nAME"></p>
                         <small id="email"></small>
@@ -78,10 +174,10 @@
 
                     <div class="profileDrop" id="profileDrop">
                         <div class="NameEmail">
-                            <span>ed</span>
+                            <span id="sliceName">ed</span>
                             <div class="nameEmial mobile">
-                                <p id="nAME"></p>
-                                <small id="email"></small>
+                                <p id="nAMES" ></p></p>
+                                <small class="secEmail" id="email"></small>
                             </div>
                         </div>
                         <div class="myProfile">
@@ -171,8 +267,22 @@
 
             </div>
         </section>
+
+       <section>
+             <small>© 2026 VendMall</small>
+       </section>
     </main>
 
+
+    <!--======== loader=======  -->
+    <div id="loaderDiv">
+        <div class="loader"></div>
+        <h3>Loading Dashboard ...</h3>
+
+    </div>
+
+
+        <script type="module" src="function/script.js"></script>
 </body>
 
 </html>

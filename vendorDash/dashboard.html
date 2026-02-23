@@ -54,9 +54,9 @@
                     <i class="fa-solid fa-angle-down" id="dashARROW"></i>
                 </div>
                 <div class="dashOption">
-                    <p>Dashboard</p>
+                    <p id="dashBoard">Dashboard</p>
                     <p>Store Analytics</p>
-                    <p>Oprders</p>
+                    <p>Orders</p>
                 </div>
             </div>
             <div class="dashBTN">
@@ -76,12 +76,12 @@
                     <i class="fa-solid fa-angle-down" id="staffArrow"></i>
                 </div>
                 <div class="dashOption">
-                    <p>Roles</p>
+                    <p id="Roles">Roles</p>
                     <p>User</p>
                 </div>
 
             </div>
-            <div class="dashBTN">
+            <div class="dashBTN" id="POS">
                 <div class="SM dash">
                     <div class="iTxt BTN">
                         <i class="fa-solid fa-desktop"></i>
@@ -143,7 +143,7 @@
         </div>
 
     </aside>
-    <main>
+    <main class="EntEr">
         <nav>
             <div class="swich">
                 <button id="close" class="destop">
@@ -177,7 +177,7 @@
                         <div class="NameEmail">
                             <span id="sliceName">ed</span>
                             <div class="nameEmial mobile">
-                                <p id="nAME"></p>
+                                <p id="nAMES" ></p>
                                 <small class="secEmail" id="email"></small>
                             </div>
                         </div>
@@ -432,9 +432,19 @@
 
 
 
-
+                <!-- ------===== alert ==== -->
              <div id="msg">hello</div>
     </main>
+
+
+    <!--======== loader=======  -->
+    <div id="loaderDiv">
+        <div class="loader"></div>
+        <h3>Loading Dashboard ...</h3>
+
+    </div>
+
+    
 
     
 

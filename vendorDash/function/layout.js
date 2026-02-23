@@ -29,6 +29,7 @@ export function mobileNavBTN(){
     const navmoblieBTN = document.getElementById('navmoblieBTN');
     const aside = document.getElementById('aside');
    const closrMnav = document.getElementById('closrMnav');
+
     if(!navmoblieBTN || !aside || !closrMnav){
             return;
     }
@@ -115,7 +116,35 @@ export function mobileNavBTN(){
         }
     })
 
+    POS.addEventListener('click', ()=>{
+        window.location.href = "pos.html"
+    })
 
 
+
+
+}
+
+
+export function pageNavigation(){
+    const POS = document.getElementById('POS');
+    const dashBoard = document.getElementById('dashBoard');
+    const Roles = document.getElementById('Roles');
+
+    if(!POS || !dashBoard || !Roles) return;
+
+    dashBoard.addEventListener('click', ()=>{
+        window.location.href = "dashboard.html";
+    });
+
+     POS.addEventListener('click', ()=>{
+        window.location.href = "pos.html"
+    });
+
+    Roles.addEventListener('click', ()=>{
+        window.location.href = "roles.html";
+
+    })
+       
 
 }

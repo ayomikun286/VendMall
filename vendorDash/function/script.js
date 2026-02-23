@@ -1,4 +1,4 @@
-import {navFunction , mobileNavBTN} from "./layout.js";
+import {navFunction , mobileNavBTN, pageNavigation} from "./layout.js";
 import{dashControl} from "./dashboard.js";
 import {profile} from "./profile.js";
 import {requireVendor} from "./authGuard.js";
@@ -12,11 +12,12 @@ async function initDashboard() {
     if (!vendor) return; // requireVendor() already handles unauthorized
 
     document.body.classList.remove("hidden");
-    
+
     dashControl();
     profile(vendor);
     mobileNavBTN();
     navFunction();
+    pageNavigation();
     chartFunction();
     // Qcode(vendor);
     console.log(vendor.storeSlug)

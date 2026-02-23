@@ -1,5 +1,6 @@
 export function chartFunction(){
     const ctx = document.getElementById('orderChart');
+    if(!ctx) return;
 
     new Chart(ctx, {
       type: 'line',
