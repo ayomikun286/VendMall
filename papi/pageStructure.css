@@ -2,20 +2,6 @@
     box-sizing: border-box;
 }
 
-
-:root{
-
-     --error-bg: #FDECEC;
-  --error-text: #B42318;
-  --error-border: #F5A3A3;
-
-
-  /* success message */
-   --success-bg: #ECFDF3;
-  --success-text: #027A48;
-  --success-border: #6CE9A6;
-}
-
 body{
     padding: 0px;
     margin: 0px;
@@ -28,40 +14,26 @@ body{
 
 }
 
-/* .hidden{
+.hidden{
     display: none;
-} */
+}
 
 
 aside {
     flex: 2;
     height: 100%;
-    overflow-y:scroll ;
     border-right: 1px solid rgba(128, 128, 128, 0.315);
      transition: 0.5s ease;
      box-shadow: 3px 0px 8px rgba(220, 220, 220, 0.267);
-     background-color: rgb(247, 246, 246);
-    position: relative;
+     overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.815);
 }
 
-aside::-webkit-scrollbar{
-    background-color: rgb(247, 246, 246);
-}
-
-.navigations{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-   align-items: center;
-   line-height: 0.2px;
-background-color: rgb(247, 246, 246);
-}
-
-aside.closeSide{
+.closeSide{
     flex: 0;
     padding: 50px;
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
@@ -73,14 +45,6 @@ main{
     overflow-y:scroll ;
     overflow-x: hidden;
     animation:entrance 1s ease ;
-}
-
-
-.nameEmial.mobile{
-    overflow: hidden;
-    width: 100%;
-    padding: 5px;
-
 }
 
 
@@ -136,7 +100,6 @@ nav{
 
 section{
     padding: 20px 30px;
-     font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -277,9 +240,6 @@ section{
     justify-content: center;
     padding: 12px 20px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.432);
-     position: sticky;
-    top: 0px;
-    background-color: rgb(247, 246, 246);
 }
 
 .logo img{
@@ -302,9 +262,6 @@ section{
     padding: 10px 10px ;
       border-bottom: 1px solid rgba(128, 128, 128, 0.432);
       position: relative;
-     position: sticky;
-     top: 75px;
-      background-color: rgb(247, 246, 246);
 }
 
 .Store small{
@@ -330,17 +287,12 @@ section{
     gap: 10px;
 }
 
-
-.iTxt.BTN i{
-    font-size: 0.9rem;
-}
 .iTxt b{
     font-weight: 500;
 }
 
 .navBTN:hover{
     background-color: whitesmoke;
-    
 }
 
 .popUp{
@@ -382,106 +334,7 @@ section{
     color: gray;
 }
 
-
-.SM.dash{
-    padding: 0px 5px;
-    border-radius: 12px;
-    height: 35px;
-    transition: 0.3s ease;
-    color: gray;
-}
-
-
-.SM.dash:hover{
-    background-color: whitesmoke;
-    color: black;
-
-}
-
-
-.dashBTN{
-    padding: 0px 15px;
-    overflow: hidden;
-    height: 50px;
-    transition: 0.3rem ease;
-    width: 100%;
-}
-
-.dashBTN.open{
-    height: auto;
-}
-
-.dashOption{
-    width: 180px;
-    justify-self: end;
-    border-left: 2px solid gray;
-    padding: 0px 8px;
-    color: gray;
-    display: flex;
-    flex-direction: column;
-
-   
-}
-
-.dashOption p{
-    cursor: pointer;
-    padding: 5px;
-    border-radius: 8px;
-     font-size: 0.9rem;
-}
-
-.dashOption p:hover{
-  background-color: whitesmoke;
-    color: black;
-}
-
-
-.verifyCard{
-
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.493);
-}
-
-
-/* =========alert div ================= */
-#msg {
-      display: none;
-      position: fixed;
-      background-color: white;
-      padding: 10px;
-      pointer-events: none;
-      border-radius: 10px;
-      top: 100px;
-      right: 30px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.411);
-  }
-
-  .errorMsg {
-      /* border: 1px solid var( --error-border); */
-      color: var(--error-text);
-      background-color: var(--error-bg);
-  }
-
-  .successMsg {
-      /* border: 1px solid var(--success-border); */
-      color: var(--success-text);
-      background-color: var(--success-bg);
-  }
-/* ======================================================= */
-
-
 @media (max-width:900px){
-    .dashOption{
-        width: 200px;
-    }
-    .navigations{
-        margin-top: 20px;
-    }
-    .Store{
-        top: 54px;
-    }
 
     .logo{
         justify-content: space-between;
@@ -527,7 +380,7 @@ section{
       aside{
         position: fixed;
         z-index: 9999;
-        background-color: rgb(247, 246, 246);
+        background-color: rgb(255, 255, 255);
         width: 60%;
         left: -1000px;
         top: 0px;

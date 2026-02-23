@@ -11,7 +11,7 @@ export function CreateVendor() {
     const confPass = document.getElementById('confPass');
     const agreeTerms = document.getElementById('agreeTerms');
     const loader = document.getElementById('loader');
-
+    const resendButton = document.getElementById('resendButton');
 
     if (!formDivCreate || !Name || !StoreName || !Email || !Pass || !confPass || !agreeTerms || !loader) {
         return;
@@ -112,7 +112,8 @@ export function CreateVendor() {
                     }
 
                     } catch (err) {
-                    console.log("Waiting for verification...");
+                    clearInterval(interval);
+                    console.log("Error checking verification:", err);
                     }
                 }, 3000);
                 }
@@ -120,7 +121,7 @@ export function CreateVendor() {
 
         } catch (err) {
             loader.style.display = "none";
-            message("Something went wrong. Try again.", "error");
+            message(err.message || "Something went wrong. Try again.", "error");
 
         }
 
@@ -130,50 +131,49 @@ export function CreateVendor() {
 
 
 
-    function resendMail(){
-        const resendMaill = document.getElementById('resendMaill');
-        const email = localStorage.getItem('currentVendorEmail');
-            console.log(email)
-        if(!resendMaill || !email){
-            return;
-        }
+ function resendMail() {
+    const resendBtn = document.getElementById("resendMaill");
+    const email = localStorage.getItem("currentVendorEmail");
 
-        resendMaill.addEventListener('click', async ()=>{
+    if (!resendBtn || !email) return;
 
+    resendBtn.onclick = async () => {
+        resendBtn.disabled = true;
+        loader.style.display = "flex";
 
+        try {
+            const res = await fetch(`${API_URL}api/auth/resend-verification`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email })
+            });
 
+            const data = await res.json();
 
-            try{
-
-                const res = await fetch (`${API_URL}api/auth/resend-verification`, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body:JSON.stringify({email})
-                });
-
-
-                const data = await res.json();
-
-                if (!res.ok) {
-                console.log(data);
-                message(data.message || "Failed to resend verification email", "error")
-                alert(data.message || "Failed to resend verification email");
+            if (!res.ok) {
+                message(data.message || "Failed to resend verification email", "error");
+                resendBtn.disabled = false;
                 return;
             }
-                     message(data.message || "Verification email resent successfully", "success")
-                
+
+            message(data.message || "Verification email resent successfully", "success");
+
+            resendBtn.textContent = "Email Sent";
+            setTimeout(() => {
+                resendBtn.disabled = false;
+                resendBtn.textContent = "Resend Email";
+            }, 30000); // cooldown
+
+        } catch (err) {
+            console.error(err);
+            message("Network error. Try again.", "error");
+            resendBtn.disabled = false;
+        } finally {
+            loader.style.display = "none";
+        }
+    };
+}
 
 
-            }catch(err){
-                console.log(err.message);
-            }
-
-
-
-        });
-
-    }
-
-    resendMail()
-
+resendMail()
 }
