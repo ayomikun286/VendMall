@@ -1,0 +1,86 @@
+.plus{
+  background-color: orangered;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  padding: 20px 25px;
+  font-size: 2rem;
+}
+
+.secDiv{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+#num{
+  padding: 0px 20px;
+  border-radius: 10px;
+  height: 35px;
+  border:1px solid grey;
+}
+.selectDiv{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+}
+.show-search{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.search-div input{
+  border: none;
+  background-color: transparent;
+}
+.search-div{
+  border: 1px solid gray;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.search-div input:focus{
+ outline: none;
+}
+.NPA{
+ 
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 30px;
+  border: 1px solid rgb(211, 208, 208);
+  color:   rgb(135, 132, 132);
+
+}
+.NPA p{
+  margin-right: 90px;
+}
+.mother-content{
+ border: 1px solid rgb(211, 208, 208);
+  height: auto;
+  color:  rgb(135, 132, 132);
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px;
+  
+}
+.record{
+ display: flex;
+  border: 1px solid rgb(211, 208, 208);
+ color:  rgb(135, 132, 132);
+ align-items: center;
+ justify-content: center;
+}
+.record p{
+  
+}
+.show p{
+  color:  rgb(135, 132, 132);
+  margin-left: 30px;
+}
+
