@@ -26,7 +26,7 @@ export async function requireVendor() {
         
         console.log(data);
 
-        return data; // return vendor safely
+        return data; // return vendor datas
 
     } catch (error) {
         console.error("Auth error:", error.message);

@@ -1,4 +1,5 @@
-import {message} from "./alert.js"
+import {message} from "./alert.js";
+
 export function profile(vendor) {
     const email = document.querySelectorAll('#email');
     const storeName = document.querySelectorAll('#storeName');
@@ -15,9 +16,13 @@ export function profile(vendor) {
     console.log(vendor);
 
      const firstName = vendor.name.split(" ")[0];
+
+     
     email.forEach(E => {
         E.textContent = vendor.email
     });
+
+
    storeName.forEach(SN => {
      SN.textContent = vendor.storeName
    });
@@ -63,4 +68,23 @@ export function profile(vendor) {
    })
 
 
+}
+
+export function greetings(){
+  const greet = document.getElementById('greet') ;
+  if(!greet) return;
+  const now = new Date ();
+  const hours = now.getHours();
+  console.log(now);
+  console.log(hours);
+
+  if(hours > 11){
+    greet.textContent = "Good afternoon,";
+  }else{
+    greet.textContent = "Good morning,";
+  }
+
+  if(hours > 19){
+       greet.textContent = "Good evening,";
+  }
 }

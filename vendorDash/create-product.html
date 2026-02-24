@@ -4,15 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>VendMall - Dashboard</title>
+    <title>VendMall - Dashboard</title>
     <link rel="stylesheet" href="utils/pageStructure.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="utils/pos.css">
+
+    <!-- ===========ths is you css file ======= -->
+    <link rel="stylesheet" href="utils/createProduct.css">
+    <!-- =============================== -->
 </head>
 
 <body>
+    <!-- do not touch anything here -->
     <aside id="aside">
         <div class="logo" id="logo">
             <img src="utils/images/site_logo.png" alt="VendMall" id="logoIcon">
@@ -45,6 +49,7 @@
         </div>
 
 
+
         <div class="navigations">
             <div class="dashBTN" id="dashDrop">
                 <div class="SM dash" id="dashClick">
@@ -55,7 +60,7 @@
                     <i class="fa-solid fa-angle-down" id="dashARROW"></i>
                 </div>
                 <div class="dashOption">
-                    <p id="dashBoard" >Dashboard</p>
+                    <p id="dashBoard">Dashboard</p>
                     <p>Store Analytics</p>
                     <p>Orders</p>
                 </div>
@@ -143,16 +148,16 @@
 
         </div>
 
-         <div class="navigationSEC">
+        <div class="navigationSEC">
             <i class="fa-solid fa-house"></i>
-              <i class="fa-solid fa-table-cells"></i>
-              <i class="fa-solid fa-user-group"></i>
-               <i class="fa-solid fa-desktop"></i>
-                <i class="fa-solid fa-bag-shopping"></i>
-                <i class="fa-regular fa-user"></i>
-                  <i class="fa-solid fa-trophy"></i>
-                    <i class="fa-solid fa-expand"></i>
-                      <i class="fa-solid fa-gear"></i>
+            <i class="fa-solid fa-table-cells"></i>
+            <i class="fa-solid fa-user-group"></i>
+            <i class="fa-solid fa-desktop"></i>
+            <i class="fa-solid fa-bag-shopping"></i>
+            <i class="fa-regular fa-user"></i>
+            <i class="fa-solid fa-trophy"></i>
+            <i class="fa-solid fa-expand"></i>
+            <i class="fa-solid fa-gear"></i>
 
         </div>
 
@@ -191,7 +196,7 @@
                         <div class="NameEmail">
                             <span id="sliceName">ed</span>
                             <div class="nameEmial mobile">
-                                <p id="nAMES" ></p></p>
+                                <p id="nAMES"></p>
                                 <small class="secEmail" id="email"></small>
                             </div>
                         </div>
@@ -210,94 +215,82 @@
             </div>
             <!-- <h3 id="vendorName"></h3> -->
         </nav>
+
         <section>
-            <h1>POS</h1>
-            <div class="divider1"></div>
-
-            <div class="cards">
-
-                <div class="card1">
-                    <input type="text" id="search" placeholder="Search product...">
-                    <div class="btn">
-                        <button class="all">All</button>
-                        <button class="wear">Wears</button>
+            <h2 class="pageName"> Create Product</h2>
+        </section>
+        <section>
+            <form action="">
+                <div class="form1">
+                    <div class="MainINfo main">
+                        <span><i class="fa-solid fa-file"></i></span>
+                        <h3>Main Information</h3>
                     </div>
-                    <div class="divider2"></div>
-                    <div class="cart1">
-                        <i class="fa-solid fa-cube"></i>
-                        <p>No Product Available
-
-                        </p>
+                    <div class="MainINfo basic">
+                        <span><i class="fa-solid fa-file"></i></span>
+                        <h4>Basic Information</h4>
                     </div>
-                </div>
 
 
 
-
-                <div class="card2">
-                    <div class="hold">
-                        <div class="funds">
-                            <label for="">Customer</label>
-                            <input type="type" id="customer" placeholder="+    Add New Customer">
+                    <div class="basicINFORM">
+                        <div class="inputdiv">
+                            <div class="proName">
+                                <label for="name">Product Name <span>*</span></label>
+                                <input id="productName" placeholder="Enter product name">
+                                <small>This name will be displayed on product listings and detail pages</small>
+                            </div>
+                            <div class="proCategoty">
+                                <label>Product Category</label>
+                                <select name="" id="category">
+                                    <option value="">Selcet Category</option>
+                                    <option value=""></option>
+                                </select>
+                            </div>
                         </div>
-                        <input type="text" id="hood">
-                        <div class="divider3"></div>
-                    </div>
-                    <div class="select">
-                        <h2>Selected Products</h2>
-                        <button class="item">0 items</button>
-                    </div>
-                    <div class="cart">
-                        <i class="fa-solid fa-cart-arrow-down"></i>
-                        <h2>Your cart is empty</h2>
-                        <p>Add products to your cart to begin checkout
+                        <div class="inputdiv">
+                            <div class="proName">
+                                <label for="name">SKD<span>*</span></label>
+                                <input id="SKU" placeholder="e.g. PROD-12345">
+                                <small>Stock Keeping Unit - unique identifier for your product</small>
+                            </div>
+                            <div class="proCategoty">
+                                <label>Stock Quantity<span>*</span></label>
+                               <input type="number" id="quant" placeholder="Enter Stock Quantity">
+                            </div>
 
-                        </p>
-                        <div class="divider4"></div>
-                    </div>
+                        </div>
 
-                    <div class="dis">
-                        <p>Discount:</p>
-                        <button class="zeh">0</button>
-                    </div>
-                    <div class="sub">
-                        <p>Subtotal:</p>
-                        <p class="ro">₦0.00</p>
-                    </div>
-                    <div class="divider5"></div>
-                    <div class="naira">
-                        <p>Total:</p>
-                        <p class="roi">₦0.00</p>
-                    </div>
-                    <div class="many">
-                        <button id="empty">
-                            <i class="fa-solid fa-trash-can"></i> Empty Cart
-                        </button>
-                        <button id="pay">
-                            <i class="fa-regular fa-credit-card"></i> Pay Now
-                        </button>
+
                     </div>
 
                 </div>
 
-            </div>
+            </form>
         </section>
 
-       <section>
-             <small>© 2026 VendMall</small>
-       </section>
+
+
+<!-- 
+        <section class="footer" id="role-last">
+            <small>© 2026 VendMall</small>
+        </section> -->
+
+
+
     </main>
 
 
-    <!--======== loader=======  -->
+
+
+    <!-- ======== loader=======  -->
     <div id="loaderDiv">
         <div class="loader"></div>
         <h3>Loading Dashboard ...</h3>
 
-    </div>
+    </div> 
 
-
-        <script type="module" src="function/script.js"></script>
+    <script type="module" src="function/script.js"></script> 
 </body>
 
 </html>

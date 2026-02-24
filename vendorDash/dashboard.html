@@ -44,6 +44,9 @@
                 </div>
             </div>
         </div>
+
+
+
         <div class="navigations">
             <div class="dashBTN" id="dashDrop">
                 <div class="SM dash" id="dashClick">
@@ -140,7 +143,23 @@
                 </div>
             </div>
 
+        </div> 
+
+        <div class="navigationSEC">
+            <i class="fa-solid fa-house"></i>
+              <i class="fa-solid fa-table-cells"></i>
+              <i class="fa-solid fa-user-group"></i>
+               <i class="fa-solid fa-desktop"></i>
+                <i class="fa-solid fa-bag-shopping"></i>
+                <i class="fa-regular fa-user"></i>
+                  <i class="fa-solid fa-trophy"></i>
+                    <i class="fa-solid fa-expand"></i>
+                      <i class="fa-solid fa-gear"></i>
+
         </div>
+
+
+
 
     </aside>
     <main class="EntEr">
@@ -200,7 +219,10 @@
             <h2 class="pageName">Dashboard</h2>
             <div class="dashDetailsCards">
                 <div class="card first">
-                    <h3>Good Morning, <span id="vendName">edegbai</span></h3>
+                    <div class="greetDIV">
+                        <h3 id="greet">Good Morning, </h3>
+                        <span id="vendName">edegbai</span>
+                    </div>
                     <p style=" color: gray;">Have a nice day! Did you know that you can quickly add your favorite
                         product or category to the
                         store?</p>
@@ -213,6 +235,9 @@
                         </button>
                     </div>
                 </div>
+
+                <!-- =========QR codee === -->
+
                 <div class="SMcard QR">
                     <div class="QRcode" id="qrcode">
 
@@ -227,6 +252,8 @@
                         </svg>
                     </button>
                 </div>
+
+                <!-- ================================================ -->
                 <div class="SMcard product">
                     <div class="textICON">
                         <i class="fa-solid fa-cube" id="product"></i>
@@ -433,7 +460,7 @@
 
 
                 <!-- ------===== alert ==== -->
-             <div id="msg">hello</div>
+             <div id="msg"></div>
     </main>
 
 
@@ -454,6 +481,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
     <script type="module" src="function/script.js"></script>
 </body>
 

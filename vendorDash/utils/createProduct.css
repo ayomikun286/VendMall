@@ -1,0 +1,131 @@
+form{
+    box-shadow: var(--box-shadow);
+    padding: 20px 0px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+
+.MainINfo{
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+    gap: 12px;
+    height: 40px;
+    margin-top: 20px;
+   
+}
+
+.MainINfo span{
+    display: flex;
+    background-color: rgb(197, 195, 195);
+    border-radius: 50%;
+    font-size: 1rem;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.MainINfo h3{
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.MainINfo h4{
+    font-weight: 500;
+
+}
+
+.MainINfo.main{
+    background-color: var(--card-color);
+}
+
+.form1{
+    display: flex;
+    flex-direction: column;
+}
+
+.basicINFORM{
+    display:flex ;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 30px;
+
+}
+
+.inputdiv{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 25px;
+}
+
+.proName{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.proName small{
+    color:  rgb(90, 89, 89);
+}
+
+.proName label{
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgb(90, 89, 89);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+label span{
+    color: red;
+}
+
+.proName input{
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.proName input:focus{
+    outline: none;
+}
+.proCategoty{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.proCategoty label{
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgb(90, 89, 89);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.proCategoty input,select{
+     padding: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.proCategoty input:focus{
+    outline: none;
+}
+
+
+#category option{
+    color: rgb(90, 89, 89) ;
+}
