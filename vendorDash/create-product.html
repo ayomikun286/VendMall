@@ -227,7 +227,7 @@
                         <h3>Main Information</h3>
                     </div>
                     <div class="MainINfo basic">
-                        <span><i class="fa-solid fa-file"></i></span>
+                        <span><i class="fa-solid fa-circle-info"></i></i></span>
                         <h4>Basic Information</h4>
                     </div>
 
@@ -256,8 +256,83 @@
                             </div>
                             <div class="proCategoty">
                                 <label>Stock Quantity<span>*</span></label>
-                               <input type="number" id="quant" placeholder="Enter Stock Quantity">
+                                <input type="number" id="quant" placeholder="Enter Stock Quantity">
                             </div>
+
+                        </div>
+                        <div class="priceINFO">
+                            <div class="priceTag">
+                                <span><i class="fa-solid fa-dollar-sign"></i></i></span>
+                                <p>Pricing Information</p>
+                            </div>
+                            <div class="priceINPUT">
+                                <div class="currentPrice">
+                                    <label>Current Price <span>*</span></label>
+                                    <input type="number" placeholder="Enter Current Price">
+                                </div>
+                                <div class="currentPrice">
+                                    <label>
+                                        Regular Price<span>*</span></label>
+                                    <input type="number" placeholder="Enter Regular Price">
+                                    <small>Original price before discount</small>
+                                </div>
+                                <div class="currentPrice">
+                                    <label>Tax Rate<span>*</span></label>
+                                    <select>
+                                        <option>Select Tax</option>
+                                    </select>
+                                    <small>Add product tax <span>Click here</span></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proFILEdiv">
+                            <div class="priceTag">
+                                <span><i class="fa-solid fa-dollar-sign"></i></i></span>
+                                <p>Product Files</p>
+                            </div>
+
+                            <div class="AttchDiv">
+
+                                <div class="attCONTAIN">
+                                    <small class="ATTTT">Attachment</small>
+                                    <div class="fileDIV">
+                                        <div class="imageCon" data-text="hello">
+                                            <div id="imageUP1"> <i class="fa-solid fa-arrow-up-from-bracket"></i> <span>Upload</span>
+                                                or
+                                                drag</div>
+                                            <input type="file" id="input-file1" class="input-file">
+                                        </div>
+                                        <div class="fileName" id="fileName1">
+                                            <p id="FileNamE1"></p>
+                                            <i class="fa-solid fa-xmark" id="cleanINput1"></i>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="attCONTAIN">
+                                    <small  class="ATTTT">Downloadable Product</small>
+                                    <div class="fileDIV" >
+                                        <div class="imageCon" data-text="hello" >
+                                            <div id="imageUP2"> <i class="fa-solid fa-arrow-up-from-bracket"></i> <span>Upload</span>
+                                                or
+                                                drag</div>
+                                            <input type="file" id="input-file2" class="input-file">
+                                        </div>
+                                       <div class="fileName" id="fileName2">
+                                            <p id="FileNamE2"></p>
+                                            <i class="fa-solid fa-xmark" id="cleanINput2"></i>
+                                        </div>
+
+                                    </div>
+                                    <small class="smallInput">For digital products that customers can download after purchase</small>
+
+                                </div>
+
+
+
+                            </div>
+
 
                         </div>
 
@@ -271,7 +346,7 @@
 
 
 
-<!-- 
+        <!-- 
         <section class="footer" id="role-last">
             <small>© 2026 VendMall</small>
         </section> -->
@@ -284,13 +359,13 @@
 
 
     <!-- ======== loader=======  -->
-    <div id="loaderDiv">
+    <!-- <div id="loaderDiv">
         <div class="loader"></div>
         <h3>Loading Dashboard ...</h3>
 
-    </div> 
-
-    <script type="module" src="function/script.js"></script> 
+    </div>  -->
+    <script src="function/form.js"></script>
+    <!-- <script type="module" src="function/script.js"></script>  -->
 </body>
 
 </html>
