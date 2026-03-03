@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="utils/pageStructure.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="utils/plan.css">
+</head>
+
+<body>
+   <aside id="aside">
+        <div class="logo" id="logo">
+            <img src="utils/images/site_logo.png" alt="VendMall" id="logoIcon">
+            <button id="closrMnav">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="Store" id="Store">
+            <small>Store</small>
+            <div class="navBTN" id="StorePop">
+                <div class="iTxt">
+                    <i class="fa-solid fa-shop"></i>
+                    <b id="storeName"></b>
+                </div>
+                <i class="fa-solid fa-angle-down" id="storeArrow"></i>
+            </div>
+            <div class="popUp" id="popUp">
+                <div class="SM">
+                    <div class="iTxt">
+                        <i class="fa-solid fa-shop"></i>
+                        <b id="storeName"></b>
+                    </div>
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <div class="createStore">
+                    <i class="fa-solid fa-plus"></i>
+                    <p>Create New store</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="navigations">
+            <div class="dashBTN" id="dashDrop">
+                <div class="SM dash" id="dashClick">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-house"></i>
+                        <p>Dashboard</p>
+                    </div>
+                    <i class="fa-solid fa-angle-down" id="dashARROW"></i>
+                </div>
+                <div class="dashOption">
+                    <p id="dashBoard">Dashboard</p>
+                    <p>Store Analytics</p>
+                    <p>Orders</p>
+                </div>
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-table-cells"></i>
+                        <p>Themes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashBTN" id="staffDrop">
+                <div class="SM dash" id="staffClick">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-user-group"></i>
+                        <p>Staff</p>
+                    </div>
+                    <i class="fa-solid fa-angle-down" id="staffArrow"></i>
+                </div>
+                <div class="dashOption">
+                    <p id="Roles">Roles</p>
+                    <p>User</p>
+                </div>
+
+            </div>
+            <div class="dashBTN" id="POS">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-desktop"></i>
+                        <p>Pos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashBTN" id="shopDrop">
+                <div class="SM dash" id="shopClick">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <p>Shop</p>
+                    </div>
+                    <i class="fa-solid fa-angle-down" id="shopArrow"></i>
+                </div>
+                <div class="dashOption">
+                    <p>Products</p>
+                    <p>Product Category</p>
+                    <p>Product Tax</p>
+                    <p>Product Coupon</p>
+                    <p>Subscriber</p>
+                    <p>Testimonials</p>
+                </div>
+
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash" id="Custormers">
+                    <div class="iTxt BTN">
+                        <i class="fa-regular fa-user"></i>
+                        <p >Custormers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash" id="PLAN">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-trophy"></i>
+                       <p >Plans</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-expand"></i>
+                        <p>Referral Program</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashBTN">
+                <div class="SM dash">
+                    <div class="iTxt BTN">
+                        <i class="fa-solid fa-gear"></i>
+                        <p>Store Settings</p>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+
+        <div class="navigationSEC">
+            <i class="fa-solid fa-house"></i>
+              <i class="fa-solid fa-table-cells"></i>
+              <i class="fa-solid fa-user-group"></i>
+               <i class="fa-solid fa-desktop"></i>
+                <i class="fa-solid fa-bag-shopping"></i>
+                <i class="fa-regular fa-user"></i>
+                  <i class="fa-solid fa-trophy"></i>
+                    <i class="fa-solid fa-expand"></i>
+                      <i class="fa-solid fa-gear"></i>
+
+        </div>
+
+
+
+
+    </aside>
+    <main>
+        <nav>
+            <div class="swich">
+                <button id="close" class="destop">
+                    <i class="fa-solid fa-table-columns"></i>
+                </button>
+                <button id="navmoblieBTN">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="line" style="width: 1px; height: 15px;background-color: rgba(128, 128, 128, 0.548);"></div>
+                <div class="swichText">
+                    <p>Home</p>
+                    <i class="fa-solid fa-greater-than"></i>
+                    <span id="page">Dashboard</span>
+                </div>
+            </div>
+            <div class="swich2">
+                <button id="language">
+                    <p>English</p>
+                    <i class="fa-solid fa-angle-down"></i>
+                </button>
+                <div class="profileSwich" id="profileSwich">
+                    <span id="sliceName">ed</span>
+                    <div class="nameEmial">
+                        <p id="nAME"></p>
+                        <small id="email"></small>
+                    </div>
+                    <i class="fa-solid fa-angle-down" id="profileArrow" style="font-size: 0.8rem;"></i>
+
+                    <div class="profileDrop" id="profileDrop">
+                        <div class="NameEmail">
+                            <span id="sliceName">ed</span>
+                            <div class="nameEmial mobile">
+                                <p id="nAMES"></p>
+                                <small class="secEmail" id="email"></small>
+                            </div>
+                        </div>
+                        <div class="myProfile">
+                            <i class="fa-regular fa-user"></i>
+                            <p>My Profile</p>
+                        </div>
+                        <div class="logout" id="logout">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <p>Logout</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- <h3 id="vendorName"></h3> -->
+        </nav>
+        <section>
+            <h1 class="pageName">Plans</h1>
+            <div class="cards">
+                <div class="card1">
+                    <div class="active">
+                        <h1 class="free">Free Plans</h1>
+                        <div class="con">
+                            <h2><i class="fa-solid fa-circle"></i> Active</h2>
+                        </div>
+                    </div>
+                    <h1 class="time">₦0.00
+                        <span> / Lifetime</span>
+                    </h1>
+                    <p class="day">0 days free trial</p>
+                    <p class="for">For companies that need a robust <br>full-featured time tracker.</p>
+                    <div class="all">
+                        <div class="list">
+                            <i class="fa-solid fa-x"></i>
+                            <p>Custom Domain</p>
+                        </div>
+                        <div class="domain">
+                            <i class="fa-solid fa-x"></i>
+                            <p>Sub Domain</p>
+                        </div>
+                        <div class="domain1">
+                            <i class="fa-solid fa-x"></i>
+                            <p>Shipping Method</p>
+                        </div>
+                        <div class="domain2">
+                            <i class="fa-solid fa-x"></i>
+                            <p>Additional Page</p>
+                        </div>
+                        <div class="domain3">
+                            <i class="fa-solid fa-x"></i>
+                            <p>Blog</p>
+                        </div>
+                        <div class="domain4">
+                            <i class="fa-solid fa-x"></i>
+                            <p>Progressive Web App (PWA)</p>
+                        </div>
+                        <div class="domain5">
+                            <i class="fa-solid fa-x"></i>
+                            <p>ChatGpt</p>
+                        </div>
+                    </div>
+                    <div class="hood">
+                        <div class="pro">
+                            <p class="hin">PRODUCTS</p>
+                            <P class="two">20</P>
+                        </div>
+                        <div class="sto">
+                            <p class="hin">STORES</p>
+                            <P class="two">1</P>
+                        </div>
+                    </div>
+                    <div class="hood1">
+                        <div class="pro">
+                            <p class="hin">USERS</p>
+                            <P class="two">5</P>
+                        </div>
+                        <div class="sto">
+                            <p class="hin">STORAGE LIMITS</p>
+                            <P class="two">1024</P>
+                        </div>
+                    </div>
+                    <p class="life">Lifetime</p>
+
+                </div>
+                <div class="card2">
+                    <h1 class="freee">Growth Plan</h1>
+                    <h1 class="time1">₦250.00
+                        <span> / Lifetime</span>
+                    </h1>
+                    <p class="day">0 days free trial</p>
+                    <p class="for1">Sell more, look professional, scale <br> faster.</p>
+                    <div class="all1">
+                        <div class="list">
+                            <i class="fa-solid fa-x"></i>
+                            <p>Custom Domain</p>
+                        </div>
+                        <div class="domain">
+                            <i class="fa-solid fa-x"></i>
+                            <p>Sub Domain</p>
+                        </div>
+                        <div class="domain1">
+                            <i class="fa-solid fa-check" id="ship"></i>
+                            <p>Shipping Method</p>
+                        </div>
+                        <div class="domain2">
+                            <i class="fa-solid fa-check" id="add"></i>
+                            <p>Additional Page</p>
+                        </div>
+                        <div class="domain3">
+                            <i class="fa-solid fa-check" id="blog"></i>
+                            <p>Blog</p>
+                        </div>
+                        <div class="domain4">
+                            <i class="fa-solid fa-x"></i>
+                            <p>Progressive Web App (PWA)</p>
+                        </div>
+                        <div class="domain5">
+                            <i class="fa-solid fa-x"></i>
+                            <p>ChatGpt</p>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="flex">
+                            <p class="hen">PRODUCTS</p>
+                            <P class="twi">100</P>
+                        </div>
+                        <div class="mad">
+                            <p class="hen">STORES</p>
+                            <P class="twi">3</P>
+                        </div>
+                    </div>
+                    <div class="city1">
+                        <div class="flex">
+                            <p class="hen">USERS</p>
+                            <P class="twi">200</P>
+                        </div>
+                        <div class="mad">
+                            <p class="hen">STORAGE LIMITS</p>
+                            <P class="twi">5120</P>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button class="btn1">Subscibe <i class="fa-solid fa-arrow-right-long"></i></button>
+                        <button class="btn2"><i class="fa-solid fa-share-from-square"></i></button>
+                    </div>
+                </div>
+                <div class="card3">
+                    <h1 class="freee">Business Plan</h1>
+                    <h1 class="time1">₦5000.00
+                        <span> / Lifetime</span>
+                    </h1>
+                    <p class="day">0 days free trial</p>
+                    <p class="for1">Powerful tools for serious online <br> businesses</p>
+                    <div class="all1">
+                        <div class="list">
+                            <i class="fa-solid fa-check" id="blog"></i>
+                            <p>Custom Domain</p>
+                        </div>
+                        <div class="domain">
+                            <i class="fa-solid fa-check" id="blog"></i>
+                            <p>Sub Domain</p>
+                        </div>
+                        <div class="domain1">
+                            <i class="fa-solid fa-check" id="ship"></i>
+                            <p>Shipping Method</p>
+                        </div>
+                        <div class="domain2">
+                            <i class="fa-solid fa-check" id="add"></i>
+                            <p>Additional Page</p>
+                        </div>
+                        <div class="domain3">
+                            <i class="fa-solid fa-check" id="blog"></i>
+                            <p>Blog</p>
+                        </div>
+                        <div class="domain4">
+                            <i class="fa-solid fa-check" id="blog"></i>
+                            <p>Progressive Web App (PWA)</p>
+                        </div>
+                        <div class="domain5">
+                            <i class="fa-solid fa-check" id="blog"></i>
+                            <p>ChatGpt</p>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="flex">
+                            <p class="hen">PRODUCTS</p>
+                            <P class="twi">Unlimited</P>
+                        </div>
+                        <div class="mad">
+                            <p class="hen">STORES</p>
+                            <P class="twi">10</P>
+                        </div>
+                    </div>
+                    <div class="city1">
+                        <div class="flex">
+                            <p class="hen">USERS</p>
+                            <P class="twi">Unlimited</P>
+                        </div>
+                        <div class="mad">
+                            <p class="hen">STORAGE LIMITS</p>
+                            <P class="twi">10280</P>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button class="btn1">Subscibe <i class="fa-solid fa-arrow-right-long"></i></button>
+                        <button class="btn2"><i class="fa-solid fa-share-from-square"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="hero">
+                <h1>Plan order History</h1>
+                <div class="inside">
+                    <div class="show">
+                        <div class="how">
+                            <p>Show</p>
+                            <button class="btn7">10 <i class="fa-solid fa-angle-down"></i></button>
+                            <p>entries</p>
+                        </div>
+                        <div class="search">
+                            <input type="text" id="sea" placeholder="Search...">
+                        </div>
+                    </div>
+                    <div class="avatar">
+                        <p>Order Id</p>
+                        <p>Date</p>
+                        <p>Name</p>
+                        <p>Plan Name</p>
+                        <p>Price</p>
+                        <p>Payment Type</p>
+                        <p>Status</p>
+                        <p>Coupon</p>
+                        <p>Invoice</p>
+                    </div>
+                    <div class="record">
+                        <p>No records found</p>
+                    </div>
+                    <p class="tin">Showing 0 to 0 of 0 results
+                    </p>
+                </div>
+
+            </div>
+           
+        </section>
+            <div id="msg"></div>
+    </main>
+    
+     <div id="loaderDiv">
+        <div class="loader"></div>
+        <h3>Loading Dashboard ...</h3>
+
+    </div>
+        <script type="module" src="function/script.js"></script>
+</body>
+
+</html>

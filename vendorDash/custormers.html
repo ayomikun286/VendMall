@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VendMall - Dashboard</title>
+    <title>Document</title>
     <link rel="stylesheet" href="utils/pageStructure.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
-
-    <!-- ===========ths is you css file ======= -->
-    <link rel="stylesheet" href="utils/roles.css">
-    <!-- =============================== -->
+    <link rel="stylesheet" href="utils/custormer.css">
 </head>
-
 <body>
-    <!-- do not touch anything here -->
-   <aside id="aside">
+    <aside id="aside">
         <div class="logo" id="logo">
             <img src="utils/images/site_logo.png" alt="VendMall" id="logoIcon">
             <button id="closrMnav">
@@ -166,7 +160,7 @@
 
     </aside>
     <main>
-        <nav>
+          <nav>
             <div class="swich">
                 <button id="close" class="destop">
                     <i class="fa-solid fa-table-columns"></i>
@@ -218,137 +212,50 @@
             </div>
             <!-- <h3 id="vendorName"></h3> -->
         </nav>
-
-
-        <!-- down to here  -->
-
-
-        <!-- our design start from here  -->
-
-
-        <!-- <section>
-
-            <div class="secDiv">
-                <h1>Roles</h1>
-                <div class="plus">+</div>
+        <section>
+            <div class="export">
+            <h1 class="pageName">Customers</h1>
+            <i id="port" class="fa-solid fa-arrow-up-from-bracket"></i>
             </div>
-            <div class="mother-content">
-                <div class="show-search">
-                    <div class="selectDiv">
+
+            <div class="card">
+                <div class="show">
+                    <div class="how">
                         <p>Show</p>
-                        <select name="numbers" id="num">
-                            <option value="ten">10</option>
-                            <option value="ten">25</option>
-                            <option value="ten">50</option>
-                            <option value="ten">100</option>
-                        </select>
+                        <button class="btn">10 <i class="fa-solid fa-angle-down"></i></button>
                         <p>entries</p>
                     </div>
-
-                    <div class="search-div">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" placeholder="Search...">
-
+                    <div class="search">
+                        <input type="text" id="sea"placeholder="Search...">
                     </div>
                 </div>
-
-                <div class="NPA">
-                    <p>Name</p>
-                    <p>Permisssion</p>
-                    <p>Action</p>
+                <div class="avatar">
+                    <p>Customer Avatar</p>
+                    <div class="word">
+                         <p>Name</p>
+                         <p>Email</p>
+                         <p>Phone No</p>
+                         <p>Action</p>
+                    </div>
                 </div>
-
                 <div class="record">
                     <p>No records found</p>
                 </div>
-
-                <div class="shoW">
+                <div class="showing">
                     <p>Showing 0 to 0 of 0 results</p>
                 </div>
-
-
-
-
-
-
-
             </div>
-           
-
-        </section> -->
-
-
-        <section>
-            <div class="roleTIT">
-                <h2 class="pageName">Roles</h2>
-                <div class="addrole">
-                    <i class="fa-solid fa-plus"></i>
-
-                </div>
-            </div>
-
-            <div class="roleCard">
-                <div class="showROLE">
-                    <div class="selectRole">
-                        <span>Show</span>
-                        <select id="SelectROLEs">
-                            <option value="">10</option>
-                            <option value="">25</option>
-                            <option value="">50</option>
-                            <option value="">100</option>
-                        </select>
-                        <span>entries</span>
-                    </div>
-                    <div class="roleSeacrh">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" id="searchROLE" placeholder="Search...">
-
-                    </div>
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Permissions</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="">
-                       <tr>
-                            <td colspan="7" style="text-align: center; color: gray; height:50px;">
-                                <small>No records found</small>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="showSMALL">
-
-                     <small>Showing 0 to 0 of 0 results</small>
-
-                </div>
-               
-
-            </div>
-
 
         </section>
-         <section class="footer" id="role-last">
-            <small>© 2026 VendMall</small>
-        </section>
-
-
-
+         <div id="msg"></div>
     </main>
 
-
-    <!--======== loader=======  -->
-    <div id="loaderDiv">
+     <div id="loaderDiv">
         <div class="loader"></div>
         <h3>Loading Dashboard ...</h3>
 
     </div>
 
-    <script type="module" src="function/script.js"></script>
+        <script type="module" src="function/script.js"></script>
 </body>
-
 </html>

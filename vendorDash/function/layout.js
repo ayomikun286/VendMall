@@ -161,8 +161,10 @@ export function pageNavigation(){
     const POS = document.getElementById('POS');
     const dashBoard = document.getElementById('dashBoard');
     const Roles = document.getElementById('Roles');
+    const plan = document.getElementById('PLAN');
+    const Custormers = document.getElementById('Custormers');
 
-    if(!POS || !dashBoard || !Roles) return;
+    if(!POS || !dashBoard || !Roles || !plan || !Custormers) return;
 
     dashBoard.addEventListener('click', ()=>{
         window.location.href = "dashboard.html";
@@ -176,5 +178,12 @@ export function pageNavigation(){
         window.location.href = "roles.html";
     })
        
+    plan.addEventListener('click', ()=>{
+        window.location.href = "plan.html"
+    });
+
+    Custormers.addEventListener('click', ()=> {
+        window.location.href = "custormers.html"
+    })
 
 }

@@ -4,10 +4,10 @@ export async function requireVendor() {
     try {
         const token = localStorage.getItem("token");
             console.log(token)
-        if (!token) {
-            window.location.href = "../login.html";
-            return null;
-        }
+        // if (!token) {
+        //     window.location.href = "../login.html";
+        //     return null;
+        // }
 
         const response = await fetch(`${API_URL}api/auth/me`, {
             method: "GET",
@@ -32,6 +32,6 @@ export async function requireVendor() {
         console.error("Auth error:", error.message);
 
         // Redirect if token invalid or expired
-        window.location.href = "../login.html";
+        // window.location.href = "../login.html";
     }
 }
