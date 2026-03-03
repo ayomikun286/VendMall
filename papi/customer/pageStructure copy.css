@@ -1,0 +1,398 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+     font-family: 'Montserrat', sans-serif;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     height: 100vh;
+
+}
+
+.hidden{
+    display: none;
+}
+
+
+aside {
+    flex: 2;
+    height: 100%;
+    border-right: 1px solid rgba(128, 128, 128, 0.315);
+     transition: 0.5s ease;
+     box-shadow: 3px 0px 8px rgba(220, 220, 220, 0.267);
+     overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.815);
+}
+
+.closeSide{
+    flex: 0;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+main{
+    flex: 8;
+    height: 100%;
+    overflow-y:scroll ;
+    overflow-x: hidden;
+    animation:entrance 1s ease ;
+}
+
+
+@keyframes entrance {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+    
+}
+
+
+nav{
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    position:sticky;
+    top: 0px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 3px 8px rgba(220, 220, 220, 0.267);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.349);
+    z-index: 9900;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.swich{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.swichText{
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    padding: 0px 8px;
+    font-size: 0.8rem;
+    gap: 15px;
+
+}
+
+.swichText i{
+    font-weight: 400;
+    font-size: 0.5rem;
+}
+.swichText span{
+    font-weight: 500;
+}
+
+section{
+    padding: 20px 30px;
+}
+
+
+.content{
+    height: 800px;
+}
+
+
+#close,#navmoblieBTN{
+    padding: 8px;
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.623);
+    border-radius: 8px;
+    color: black;
+}
+
+.swich2{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.profileSwich{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: auto;
+    padding: 5px;
+    border-radius: 12px;
+    transition: 0.5s ease;
+    cursor: pointer;
+
+}
+
+.profileSwich:hover{
+    background-color: whitesmoke;
+}
+.profileSwich span{
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+
+}
+
+#language{
+    display: flex;
+    align-items: center;
+    border: none;
+    gap: 15px;
+    padding:10px ;
+    height: 30px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    background-color: transparent;
+    transition: 0.5s ease;
+    color: black;
+
+}
+.nameEmial{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 5px;
+}
+
+.nameEmial p{
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: -5px;
+    margin-bottom: -2px;
+}
+
+.nameEmial small{
+    font-size: 0.6rem;
+}
+
+#language:hover{
+    background-color: whitesmoke;
+}
+
+.profileDrop{
+    position: fixed;
+    background-color:white;
+    top: 60px;
+    right: 30px;
+    width: 100%;
+    max-width: 220px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0px 0px 8px rgba(128, 128, 128, 0.562);
+    border-radius:12px;
+    padding: 10px 0px ;
+}
+
+.profileDrop.show{
+    display: flex;
+}
+
+.NameEmail,.myProfile{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 12px;
+    height: 50px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.295);
+    font-size: 0.8rem;
+    transition: 0.5s ease;
+}
+
+.myProfile:hover{
+     background-color: whitesmoke;
+
+}
+.logout:hover{
+    background-color: whitesmoke;
+    
+}
+
+.logout{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 12px;
+    height: 50px;
+    font-size: 0.8rem;
+}
+
+#navmoblieBTN{
+    display: none;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.432);
+}
+
+.logo img{
+    width:200px
+}
+
+#closrMnav{
+    background-color: transparent;
+    border: none;
+    font-size: 1.3rem;
+    display: none;
+    color: black;
+}
+
+
+.Store{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 10px ;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.432);
+      position: relative;
+}
+
+.Store small{
+    font-weight: 600;
+   color: gray;
+   font-size: 0.7rem;
+   padding: 0px 10px;
+}
+
+
+.navBTN{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    transition: 0.5s ease;
+}
+.iTxt{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.iTxt b{
+    font-weight: 500;
+}
+
+.navBTN:hover{
+    background-color: whitesmoke;
+}
+
+.popUp{
+    background-color: white;
+    position: absolute;
+    padding: 10px 10px;
+    box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.226);
+    border-radius: 10px;
+    width: 90%;
+    bottom: -100px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    height: auto;
+    box-sizing: border-box;
+}
+.popUp.show{
+    display: flex;
+}
+
+.SM{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     font-weight: 500;
+     font-size: 0.8rem;
+     margin-top: 15px;
+}
+
+.createStore{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.createStore p{
+    font-size: 0.9rem;
+    color: gray;
+}
+
+@media (max-width:900px){
+
+    .logo{
+        justify-content: space-between;
+        padding: 10px 10px;
+    }
+    .logo img{
+             width:130px
+    }
+
+    #closrMnav{
+        display: flex;
+    }
+    nav{
+        padding: 20px 10px;
+    }
+
+    .destop{
+        display:none;
+    }
+
+    #navmoblieBTN{
+        display: flex;
+    }
+
+    .nameEmial.mobile{
+        display: flex;
+    }
+    .swichText{
+        gap: 10px;
+    }
+    .swichText i{
+        display: none;
+    }
+    .line{
+        display: none;
+    }
+    .swich{
+        gap: 10px;
+    }
+    .nameEmial{
+        display: none;
+    }
+      aside{
+        position: fixed;
+        z-index: 9999;
+        background-color: rgb(255, 255, 255);
+        width: 60%;
+        left: -1000px;
+        top: 0px;
+        transition: 0.5s ease;
+
+      }
+
+      .openMobileNav{
+          left: 1px;
+      }
+      section{
+        padding: 15px 15px;
+      }
+
+}
