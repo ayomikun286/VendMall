@@ -1,29 +1,39 @@
-import {message} from "./alert.js"
+import {message} from "./alert.js";
+
 export function profile(vendor) {
     const email = document.querySelectorAll('#email');
     const storeName = document.querySelectorAll('#storeName');
-    const nAME = document.querySelectorAll('#nAME');
+    const disName = document.getElementById('nAME');
     const sliceName = document.querySelectorAll('#sliceName');
     const vendName = document.getElementById('vendName');
    const copyLink = document.getElementById('copyLink');
-    if (!email || !nAME || !storeName  || !sliceName || !vendName || !copyLink) {
-        return;
-    }
+   const nAMES = document.getElementById('nAMES');
+    // if (!email || !nAME || !storeName  || !sliceName || !vendName || !copyLink) {
+    //     return;
+    // }
 
    
     console.log(vendor);
 
      const firstName = vendor.name.split(" ")[0];
+
+     
     email.forEach(E => {
         E.textContent = vendor.email
     });
+
+
    storeName.forEach(SN => {
      SN.textContent = vendor.storeName
    });
 
-   nAME.forEach(NM =>{
-    NM.textContent = firstName;
-   })
+
+  //  nAME.forEach(NM =>{
+  //   NM.textContent = firstName;
+  //  })
+
+   disName.textContent = firstName;
+   
 
    const initails = vendor.name.slice(0,2).toUpperCase();
 
@@ -33,9 +43,21 @@ export function profile(vendor) {
 
    sliceName.forEach(slName =>{
      slName.textContent = initails
-   })
+   });
 
-   vendName.textContent = firstName;
+   if(!nAMES){
+    return
+   }else{
+    nAMES.textContent = firstName
+   }
+
+   if(!vendName){
+    return;
+   }else{
+    vendName.textContent = firstName;
+
+   }
+   
 
    copyLink.addEventListener('click', ()=>{
        const storeLink = `https://vend-mall.vercel.app/store.html?vendor=${vendor.storeSlug}`;
@@ -46,4 +68,23 @@ export function profile(vendor) {
    })
 
 
+}
+
+export function greetings(){
+  const greet = document.getElementById('greet') ;
+  if(!greet) return;
+  const now = new Date ();
+  const hours = now.getHours();
+  console.log(now);
+  console.log(hours);
+
+  if(hours > 11){
+    greet.textContent = "Good afternoon,";
+  }else{
+    greet.textContent = "Good morning,";
+  }
+
+  if(hours > 19){
+       greet.textContent = "Good evening,";
+  }
 }

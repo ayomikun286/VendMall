@@ -1,8 +1,15 @@
 
+
+
 export function navFunction() {
     const Store = document.getElementById('Store');
     const logoIcon = document.getElementById('logoIcon');
-    if(!Store || !logo){
+    const logo = document.getElementById('logo');
+    const navigationSEC = document.querySelector('.navigationSEC');
+    const navigations = document.querySelector('.navigations');
+    const smallICONE = document.querySelectorAll('.navigationSEC i');
+
+    if(!Store || !logo || !logo || !navigationSEC || !navigations ){
         return;
     }
     let isOpen = false;
@@ -13,9 +20,15 @@ export function navFunction() {
             Store.style.display = "none";
             logoIcon.src = "utils/images/favicon.png";
             logoIcon.style.width = "50px"
+            logo.classList.add('mobile')
+            navigationSEC.classList.add('icons')
+            navigations.classList.add('CLOSE')
             isOpen = true;
         } else {
             aside.classList.remove('closeSide');
+             navigations.classList.remove('CLOSE')
+             logo.classList.remove('mobile');
+             navigationSEC.classList.remove('icons')
               Store.style.display = "flex";
                 logoIcon.src = "utils/images/site_logo.png";
                  logoIcon.style.width = "200px"
@@ -23,12 +36,31 @@ export function navFunction() {
             isOpen = false
         }
     }
+
+    if(!smallICONE){
+        return;
+    }else{
+        smallICONE.forEach(IC =>{
+            IC.addEventListener('click', ()=>{
+           aside.classList.remove('closeSide');
+             navigations.classList.remove('CLOSE')
+             logo.classList.remove('mobile');
+             navigationSEC.classList.remove('icons')
+              Store.style.display = "flex";
+                logoIcon.src = "utils/images/site_logo.png";
+                 logoIcon.style.width = "200px"
+            })
+        })
+    }
+
+    
 }
 
 export function mobileNavBTN(){
     const navmoblieBTN = document.getElementById('navmoblieBTN');
     const aside = document.getElementById('aside');
    const closrMnav = document.getElementById('closrMnav');
+
     if(!navmoblieBTN || !aside || !closrMnav){
             return;
     }
@@ -115,7 +147,34 @@ export function mobileNavBTN(){
         }
     })
 
+    POS.addEventListener('click', ()=>{
+        window.location.href = "pos.html"
+    })
 
 
+
+
+}
+
+
+export function pageNavigation(){
+    const POS = document.getElementById('POS');
+    const dashBoard = document.getElementById('dashBoard');
+    const Roles = document.getElementById('Roles');
+
+    if(!POS || !dashBoard || !Roles) return;
+
+    dashBoard.addEventListener('click', ()=>{
+        window.location.href = "dashboard.html";
+    });
+
+     POS.addEventListener('click', ()=>{
+        window.location.href = "pos.html"
+    });
+
+    Roles.addEventListener('click', ()=>{
+        window.location.href = "roles.html";
+    })
+       
 
 }

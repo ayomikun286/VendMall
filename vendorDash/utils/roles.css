@@ -1,0 +1,228 @@
+/* .plus{
+  background-color: orangered;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  padding: 20px 25px;
+  font-size: 2rem;
+}
+
+.secDiv{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+#num{
+  padding: 0px 20px;
+  border-radius: 10px;
+  height: 35px;
+  border:1px solid grey;
+}
+.selectDiv{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+}
+.show-search{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.search-div input{
+  border: none;
+  background-color: transparent;
+}
+.search-div{
+  border: 1px solid gray;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.search-div input:focus{
+ outline: none;
+}
+.NPA{
+ 
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 30px;
+  border: 1px solid rgb(211, 208, 208);
+  color:   rgb(135, 132, 132);
+
+}
+.NPA p{
+  margin-right: 90px;
+}
+.mother-content{
+ border: 1px solid rgb(211, 208, 208);
+  height: auto;
+  color:  rgb(135, 132, 132);
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px;
+  
+}
+.record{
+ display: flex;
+  border: 1px solid rgb(211, 208, 208);
+ color:  rgb(135, 132, 132);
+ align-items: center;
+ justify-content: center;
+}
+/* .record p{
+  
+} */
+/* .shoW p{
+  color:  rgb(135, 132, 132);
+  margin-left: 30px;
+} */
+ 
+
+
+.roleTIT{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addrole{
+  background-color: orangered;
+  padding:8px 16px;
+  border-radius: 8px;
+  color: white;
+
+}
+
+.roleCard{
+  box-shadow: var(--box-shadow);
+ 
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.showROLE{
+  display: flex;
+  align-items:center;
+  padding: 35px 25px;
+  justify-content:space-between;
+  border-bottom: 2px solid var(--card-color);
+  
+  height: 60px;
+}
+
+
+.selectRole{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.selectRole span{
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: gray;
+}
+
+#SelectROLEs{
+  border: none;
+  box-shadow: var(--box-shadow);
+  width: 60px;
+  height: 35px;
+  border-radius: 8px;
+  padding: 5px;
+
+}
+
+#SelectROLEs:focus{
+  outline: none;
+}
+
+.roleSeacrh{
+  box-shadow: var(--box-shadow);
+  width: 200px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.roleSeacrh i{
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.roleSeacrh input{
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+}
+
+.roleSeacrh input:focus{
+  outline: none;
+}
+
+.roleSeacrh input::placeholder{
+  font-size: 0.9rem;
+  color: gray;
+  font-weight: 500;
+}
+
+table{
+  width: 100%;
+  padding: 20px;
+  border-bottom: 2px solid var(--card-color);
+  border-collapse: collapse;
+}
+
+thead{
+  height: 45px;
+    border-bottom: 2px solid var(--card-color);
+    background-color:rgba(245, 245, 245, 0.493);
+   
+}
+
+tr{
+  text-align: start;
+}
+
+th{
+  text-align: start;
+  font-size: 0.8rem;
+   padding: 10px 25px;
+   color: gray;
+
+}
+
+.showSMALL{
+  height: 50px;
+  padding: 20px ;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 0.8rem;
+  color: gray;
+}
+
+
+/* #role-last{
+  position: absolute;
+  bottom: 5px;
+} */
+
+@media (max-width:900px) {
+  .showROLE{
+    padding: 8px 8px;
+  }
+  
+}

@@ -1,5 +1,6 @@
 export function chartFunction(){
     const ctx = document.getElementById('orderChart');
+    if(!ctx) return;
 
     new Chart(ctx, {
       type: 'line',
@@ -12,8 +13,8 @@ export function chartFunction(){
         ],
         datasets: [{
           label: 'Amount',
-          data: [0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0],
-          borderColor: 'orange',
+          data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          borderColor: 'orangered',
           backgroundColor: 'rgba(255,165,0,0.2)',
           tension: 0.4
         }]

@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-
+/* ===========alert card color ======= */
 :root{
 
      --error-bg: #FDECEC;
@@ -16,8 +16,16 @@
   --success-border: #6CE9A6;
 }
 
+
+
+
+:root{
+    --box-shadow:0px 0px 3px rgba(165, 164, 164, 0.815);;
+    --card-color:#eeeeee85;
+}
+
 body{
-    padding: 0px;
+    padding: 0px ;
     margin: 0px;
      font-family: 'Montserrat', sans-serif;
      display: flex;
@@ -42,7 +50,55 @@ aside {
      box-shadow: 3px 0px 8px rgba(220, 220, 220, 0.267);
      background-color: rgb(247, 246, 246);
     position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    
+
+  
+    
 }
+
+#role-last{
+  position: absolute;
+  bottom: 5px;
+}
+
+.navigationSEC{
+    width:100px;
+    height: 600px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transition: 0.5s ease;
+    font-size: 1.2rem;
+
+   
+}
+
+
+.pageName{
+    font-weight: 500;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.418);
+    width: fit-content;
+}
+
+.navigationSEC i{
+    transition: 0.5s ease;
+}
+
+.navigationSEC i:hover{
+    transform: scale(1.1);
+}
+
+.navigationSEC.icons{
+    display: flex;
+}
+
+
 
 aside::-webkit-scrollbar{
     background-color: rgb(247, 246, 246);
@@ -55,13 +111,19 @@ aside::-webkit-scrollbar{
    align-items: center;
    line-height: 0.2px;
 background-color: rgb(247, 246, 246);
+width: 100%;
+transform: 0.5s ease;
+}
+
+.navigations.CLOSE{
+    display: none;
 }
 
 aside.closeSide{
-    flex: 0;
-    padding: 50px;
+    flex: 0.8;
+    
     display: flex;
-    /* justify-content: center; */
+    justify-content: start;
     align-items: center;
     flex-direction: column;
 }
@@ -273,13 +335,28 @@ section{
 
 .logo{
     display: flex;
-    align-items: center;
+   
     justify-content: center;
     padding: 12px 20px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.432);
      position: sticky;
     top: 0px;
-    background-color: rgb(247, 246, 246);
+   
+
+   
+
+
+
+}
+
+.logo.mobile{
+      position: relative;
+       /* border-radius: 12px;
+        width: 80px;
+        height: 80px; */
+    
+    
+
 }
 
 .logo img{
@@ -301,10 +378,10 @@ section{
     gap: 20px;
     padding: 10px 10px ;
       border-bottom: 1px solid rgba(128, 128, 128, 0.432);
-      position: relative;
      position: sticky;
      top: 75px;
       background-color: rgb(247, 246, 246);
+      width: 100%;
 }
 
 .Store small{
@@ -470,6 +547,54 @@ section{
       background-color: var(--success-bg);
   }
 /* ======================================================= */
+
+
+
+
+#loaderDiv{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#loaderDiv h3{
+    font-weight: 500;
+    color: #1C232F;
+}
+
+
+/* From Uiverse.io by Fernando-sv */ 
+.loader {
+  border: 4px solid  #1C232F;
+  border-left-color: transparent;
+  width: 40px;
+  height: 40px; 
+  border-radius: 50%;
+  animation: spin89345 1s linear infinite;
+}
+
+@keyframes spin89345 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
 
 
 @media (max-width:900px){
