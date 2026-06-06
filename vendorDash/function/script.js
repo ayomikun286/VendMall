@@ -5,7 +5,7 @@ import {requireVendor} from "./authGuard.js";
 import {chartFunction} from "./orderChart.js";
 import {generateQRCode} from "./QRcode.js";
 import {shareStore} from "./shareLink.js";
-
+import {fromcontrole} from "./form.js";
 async function initDashboard() {
     const vendor = await requireVendor(); // wait for the API
 
@@ -19,7 +19,8 @@ async function initDashboard() {
     navFunction();
     pageNavigation();
     chartFunction();
-    greetings()
+    greetings();
+   fromcontrole();
    
     console.log(vendor.storeSlug)
     generateQRCode(vendor.storeSlug);

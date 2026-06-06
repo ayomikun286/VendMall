@@ -163,8 +163,9 @@ export function pageNavigation(){
     const Roles = document.getElementById('Roles');
     const plan = document.getElementById('PLAN');
     const Custormers = document.getElementById('Custormers');
+    const products = document.getElementById('products');
 
-    if(!POS || !dashBoard || !Roles || !plan || !Custormers) return;
+    if(!POS || !dashBoard || !Roles || !plan || !Custormers || !products) return;
 
     dashBoard.addEventListener('click', ()=>{
         window.location.href = "dashboard.html";
@@ -184,6 +185,10 @@ export function pageNavigation(){
 
     Custormers.addEventListener('click', ()=> {
         window.location.href = "custormers.html"
+    })
+
+    products.addEventListener('click', ()=> {
+        window.location.href = "products.html"
     })
 
 }

@@ -1,0 +1,119 @@
+.pageContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.pageContent span{
+    background-color: orangered;
+    display: flex;
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.proBTN{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.proBTN a {
+    text-decoration: none;
+}
+
+.Dtable{
+    box-shadow: var(--box-shadow);
+    padding:10px 0px;
+    border-radius: 12px;
+}
+
+.proLIST{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(192, 192, 192);
+    padding: 10px 20px;
+}
+
+.sideONE{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sideONE p{
+    color: gray;
+    font-size: 0.9rem;
+}
+
+.sideONE select{
+    box-shadow: var(--box-shadow);
+    border: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+.searPRO{
+    box-shadow: 0px 0px 8px rgba(128, 128, 128, 0.705);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 180px;
+    border-radius: 8px;
+    padding: 8px;
+    color: gray;
+    font-size: 0.8rem;
+}
+
+.searPRO input{
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.searPRO input:focus{
+    outline: none;
+}
+
+.searPRO input::placeholder{
+    font-size: 0.8rem;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead{
+    color: gray;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgb(196, 196, 196);
+    height: 50px;
+    font-weight: 400;
+}
+
+tr{
+    text-align: start;
+}
+
+
+tbody{
+    border-bottom: 1px solid rgb(196, 196, 196);
+    height: 50px;
+}
+
+.showSMALL{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    color: gray;
+}
+

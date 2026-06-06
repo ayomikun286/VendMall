@@ -4,10 +4,10 @@ export async function requireVendor() {
     try {
         const token = localStorage.getItem("token");
             console.log(token)
-        // if (!token) {
-        //     window.location.href = "../login.html";
-        //     return null;
-        // }
+        if (!token) {
+            window.location.href = "../login.html";
+            return null;
+        }
 
         const response = await fetch(`${API_URL}api/auth/me`, {
             method: "GET",
@@ -18,7 +18,9 @@ export async function requireVendor() {
         });
 
         if (!response.ok) {
+            window.location.href = "../login.html";
             throw new Error("Not authorized");
+
         }
 
         loaderDiv.style.display = "none";

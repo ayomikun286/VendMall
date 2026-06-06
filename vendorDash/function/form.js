@@ -1,4 +1,5 @@
-const imageUP1 = document.getElementById('imageUP1');
+export function fromcontrole(){
+    const imageUP1 = document.getElementById('imageUP1');
 const inputFile1 = document.getElementById('input-file1');
 
 const fileName1 = document.getElementById('fileName1');
@@ -6,11 +7,18 @@ const Filedis1 = document.getElementById('FileNamE1');
 
 const cleanINput1 = document.getElementById('cleanINput1')
 
-imageUP1.addEventListener('click', ()=>{
+
+if(imageUP1){
+    imageUP1.addEventListener('click', ()=>{
     inputFile1.click();
 });
 
-inputFile1.addEventListener('change', () => {
+}
+
+
+
+if(inputFile1){
+    inputFile1.addEventListener('change', () => {
     if (inputFile1.files.length > 0) {
         const fileName = inputFile1.files[0].name;
         Filedis1.textContent = fileName;
@@ -19,11 +27,18 @@ inputFile1.addEventListener('change', () => {
     fileName1.style.display ="flex"
 });
 
-cleanINput1.addEventListener('click', ()=>{
+}
+
+
+if(cleanINput1){
+    cleanINput1.addEventListener('click', ()=>{
     inputFile1.value = "";
     fileName1.style.display ="none"
 
 })
+
+
+}
 
 
 
@@ -40,7 +55,12 @@ const imageUP2 = document.getElementById('imageUP2');
 const inputFile2 = document.getElementById('input-file2');
 const cleanINput2 = document.getElementById('cleanINput2');
 
-imageUP2.addEventListener('click', ()=>{
+
+
+
+if(imageUP2 && inputFile2 && cleanINput2 && fileName2 && Filedis2  ){
+         
+    imageUP2.addEventListener('click', ()=>{
     inputFile2.click();
 });
 
@@ -59,12 +79,11 @@ cleanINput2.addEventListener('click', ()=>{
 
 })
 
+}
+
+
+}
 
 
 
-
-
-
-
-
-
+fromcontrole();

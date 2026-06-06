@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>VendMall - Dashboard</title>
     <link rel="stylesheet" href="utils/pageStructure.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="utils/custormer.css">
+
+    <!-- ===========ths is you css file ======= -->
+    <link rel="stylesheet" href="utils/product.css">
+    <!-- =============================== -->
 </head>
+
 <body>
+    <!-- do not touch anything here -->
     <aside id="aside">
         <div class="logo" id="logo">
             <img src="utils/images/site_logo.png" alt="VendMall" id="logoIcon">
@@ -98,7 +104,7 @@
                     <i class="fa-solid fa-angle-down" id="shopArrow"></i>
                 </div>
                 <div class="dashOption">
-                    <p id="products">Products</p>
+                     <p id="products">Products</p>
                     <p>Product Category</p>
                     <p>Product Tax</p>
                     <p>Product Coupon</p>
@@ -111,7 +117,7 @@
                 <div class="SM dash" id="Custormers">
                     <div class="iTxt BTN">
                         <i class="fa-regular fa-user"></i>
-                        <p >Custormers</p>
+                        <p>Custormers</p>
                     </div>
                 </div>
             </div>
@@ -119,7 +125,7 @@
                 <div class="SM dash" id="PLAN">
                     <div class="iTxt BTN">
                         <i class="fa-solid fa-trophy"></i>
-                       <p >Plans</p>
+                        <p>Plans</p>
                     </div>
                 </div>
             </div>
@@ -140,18 +146,18 @@
                 </div>
             </div>
 
-        </div> 
+        </div>
 
         <div class="navigationSEC">
             <i class="fa-solid fa-house"></i>
-              <i class="fa-solid fa-table-cells"></i>
-              <i class="fa-solid fa-user-group"></i>
-               <i class="fa-solid fa-desktop"></i>
-                <i class="fa-solid fa-bag-shopping"></i>
-                <i class="fa-regular fa-user"></i>
-                  <i class="fa-solid fa-trophy"></i>
-                    <i class="fa-solid fa-expand"></i>
-                      <i class="fa-solid fa-gear"></i>
+            <i class="fa-solid fa-table-cells"></i>
+            <i class="fa-solid fa-user-group"></i>
+            <i class="fa-solid fa-desktop"></i>
+            <i class="fa-solid fa-bag-shopping"></i>
+            <i class="fa-regular fa-user"></i>
+            <i class="fa-solid fa-trophy"></i>
+            <i class="fa-solid fa-expand"></i>
+            <i class="fa-solid fa-gear"></i>
 
         </div>
 
@@ -160,7 +166,7 @@
 
     </aside>
     <main>
-          <nav>
+        <nav>
             <div class="swich">
                 <button id="close" class="destop">
                     <i class="fa-solid fa-table-columns"></i>
@@ -193,7 +199,7 @@
                         <div class="NameEmail">
                             <span id="sliceName">ed</span>
                             <div class="nameEmial mobile">
-                                <p id="nAMES" ></p>
+                                <p id="nAMES"></p>
                                 <small class="secEmail" id="email"></small>
                             </div>
                         </div>
@@ -212,50 +218,87 @@
             </div>
             <!-- <h3 id="vendorName"></h3> -->
         </nav>
-        <section>
-            <div class="export">
-            <h1 class="pageName">Customers</h1>
-            <i id="port" class="fa-solid fa-arrow-up-from-bracket"></i>
-            </div>
 
-            <div class="card">
-                <div class="show">
-                    <div class="how">
+
+        <!-- down to here  -->
+
+
+        <!-- our design start from here  -->
+
+        <section class="pageContent">
+            <h1 class="pageName">Products</h1>
+            <div class="proBTN">
+                <span><i class="fa-solid fa-plus" style="color: #ffffff;"></i></span>
+                <span><i class="fa-solid fa-plus" style="color: #ffffff;"></i></span>
+                <span><i class="fa-solid fa-plus" style="color: #ffffff;"></i></span>
+                <a href="create-product.html"><span id="createPRO"><i class="fa-solid fa-plus" style="color: #ffffff;"></i></span></a>
+            </div>
+        </section>
+        <section>
+            <div class="Dtable">
+                <div class="proLIST">
+                    <div class="sideONE">
                         <p>Show</p>
-                        <button class="btn">10 <i class="fa-solid fa-angle-down"></i></button>
+                        <select name="" id="">
+                            <option value="">1</option>
+                        </select>
                         <p>entries</p>
                     </div>
-                    <div class="search">
-                        <input type="text" id="sea"placeholder="Search...">
+                    <div class="searPRO">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search...">
                     </div>
                 </div>
-                <div class="avatar">
-                    <p>Customer Avatar</p>
-                    <div class="word">
-                         <p>Name</p>
-                         <p>Email</p>
-                         <p>Phone No</p>
-                         <p>Action</p>
-                    </div>
-                </div>
-                <div class="record">
-                    <p>No records found</p>
-                </div>
-                <div class="showing">
-                    <p>Showing 0 to 0 of 0 results</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Stock</th>
+                            <th>Create At</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="7" style="text-align: center; color: gray; height:50px;">
+                                <small>No records found</small>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="showSMALL">
+
+                    <small>Showing 0 to 0 of 0 results</small>
+
                 </div>
             </div>
 
+
         </section>
-         <div id="msg"></div>
+
+
+        <section class="footer" id="role-last">
+            <small>© 2026 VendMall</small>
+        </section>
+
+
+
     </main>
 
-     <div id="loaderDiv">
+
+
+
+    <!-- ======== loader=======  -->
+    <div id="loaderDiv">
         <div class="loader"></div>
         <h3>Loading Dashboard ...</h3>
 
     </div>
 
-        <script type="module" src="function/script.js"></script>
+    <script type="module" src="function/script.js"></script>
 </body>
+
 </html>
